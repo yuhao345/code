@@ -1,0 +1,91 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  language:
+    Properties:
+      Height: =956
+      Width: =440
+    Children:
+      - English_5:
+          Control: Label@2.5.1
+          Properties:
+            Height: =34
+            Text: ="English"
+            Width: =122
+            X: =22
+            Y: =129
+      - 简体中文_5:
+          Control: Label@2.5.1
+          Properties:
+            Height: =46
+            Text: ="简体中文"
+            Width: =200
+            X: =22
+            Y: =193
+      - Русский (язык)_5:
+          Control: Label@2.5.1
+          Properties:
+            Height: =81
+            Text: ="Русский (язык)"
+            Width: =237
+            X: =22
+            Y: =255
+      - 日本語_5:
+          Control: Label@2.5.1
+          Properties:
+            Height: =42
+            Text: ="日本語"
+            Width: =156
+            X: =22
+            Y: =354
+      - 한국어_5:
+          Control: Label@2.5.1
+          Properties:
+            Height: =56
+            Text: ="한국어"
+            Width: =251
+            X: =22
+            Y: =405
+      - Français_5:
+          Control: Label@2.5.1
+          Properties:
+            Height: =39
+            Text: ="Français"
+            Width: =138
+            X: =22
+            Y: =471
+      - Arrow1_11:
+          Control: Arrow@2.3.0
+          Variant: BackArrow
+          Properties:
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =80
+            OnSelect: =Navigate(setting)
+            Width: =73
+            X: =9
+            Y: =15
+      - Button9_5:
+          Control: Classic/Button@2.2.0
+          Properties:
+            Fill: =RGBA(0, 0, 0, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            OnSelect: |+
+              =Navigate(setting)
+
+
+
+
+            RadiusBottomLeft: =60
+            RadiusBottomRight: =60
+            RadiusTopLeft: =60
+            RadiusTopRight: =60
+            Text: ="Confirm"
+            Width: =335
+            X: =52
+            Y: =735

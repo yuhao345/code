@@ -1,0 +1,299 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  notification:
+    Properties:
+      Height: =956
+      Width: =440
+    Children:
+      - Receive message notification:
+          Control: Label@2.5.1
+          Properties:
+            FontWeight: =FontWeight.Bold
+            Height: =28
+            Size: =15
+            Text: ="Receive message notification"
+            Width: =429
+            X: =11
+            Y: =92
+      - engagement notification:
+          Control: Label@2.5.1
+          Properties:
+            AutoHeight: =true
+            FontWeight: =FontWeight.Bold
+            Height: =24
+            Size: =15
+            Text: ="Engagement notification"
+            Width: =303
+            X: =11
+            Y: =134
+      - Likes&Collects:
+          Control: Label@2.5.1
+          Properties:
+            AutoHeight: =true
+            FontWeight: =FontWeight.Bold
+            Height: =24
+            Size: =15
+            Text: ="Likes&Collects"
+            Width: =150
+            X: =10
+            Y: =184
+      - New followers:
+          Control: Label@2.5.1
+          Properties:
+            AutoHeight: =true
+            FontWeight: =FontWeight.Bold
+            Height: =24
+            Size: =15
+            Text: ="New followers"
+            Width: =253
+            X: =13
+            Y: =244
+      - Comments:
+          Control: Label@2.5.1
+          Properties:
+            AutoHeight: =true
+            FontWeight: =FontWeight.Bold
+            Height: =24
+            Size: =15
+            Text: ="Comments"
+            Width: =159
+            X: =12
+            Y: =300
+      - '@':
+          Control: Label@2.5.1
+          Properties:
+            FontWeight: =FontWeight.Bold
+            Height: =24
+            Size: =15
+            Text: ="@"
+            Width: =25
+            X: =13
+            Y: =356
+      - Chat notification:
+          Control: Label@2.5.1
+          Properties:
+            FontWeight: =FontWeight.Bold
+            Height: =24
+            Size: =15
+            Text: ="Chat notification"
+            Width: =228
+            X: =14
+            Y: =416
+      - Chat:
+          Control: Label@2.5.1
+          Properties:
+            FontWeight: =FontWeight.Bold
+            Height: =24
+            Size: =15
+            Text: ="Chat"
+            Width: =106
+            X: =16
+            Y: =472
+      - content notifications:
+          Control: Label@2.5.1
+          Properties:
+            FontWeight: =FontWeight.Bold
+            Height: =24
+            Size: =15
+            Text: ="content notifications"
+            Width: =239
+            X: =14
+            Y: =546
+      - Follow the author for updates:
+          Control: Label@2.5.1
+          Properties:
+            FontWeight: =FontWeight.Bold
+            Height: =24
+            Size: =15
+            Text: ="Follow the author for updates "
+            Width: =292
+            X: =11
+            Y: =609
+      - Live reminders:
+          Control: Label@2.5.1
+          Properties:
+            FontWeight: =FontWeight.Bold
+            Height: =24
+            Size: =15
+            Text: ="Live reminders"
+            Width: =149
+            X: =11
+            Y: =665
+      - Content recommendation:
+          Control: Label@2.5.1
+          Properties:
+            FontWeight: =FontWeight.Bold
+            Height: =24
+            Size: =15
+            Text: ="Content recommendation"
+            Width: =255
+            X: =11
+            Y: =721
+      - Recommend users:
+          Control: Label@2.5.1
+          Properties:
+            FontWeight: =FontWeight.Bold
+            Height: =24
+            Size: =15
+            Text: ="Recommend users"
+            Width: =187
+            X: =11
+            Y: =773
+      - In-apps notifications:
+          Control: Label@2.5.1
+          Properties:
+            FontWeight: =FontWeight.Bold
+            Height: =24
+            Size: =15
+            Text: ="In-apps notifications"
+            Width: =239
+            X: =14
+            Y: =844
+      - In-apps notifications_1:
+          Control: Label@2.5.1
+          Properties:
+            FontWeight: =FontWeight.Bold
+            Height: =24
+            Size: =15
+            Text: ="In-apps notifications"
+            Width: =252
+            X: =14
+            Y: =886
+      - Icon1_1:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            Color: =RGBA(0, 0, 0, 1)
+            FocusedBorderThickness: =0
+            Height: =40
+            Icon: =Icon.Reset
+            OnSelect: =Navigate(setting)
+            Width: =40
+            X: =26
+            Y: =32
+      - Toggle1:
+          Control: Classic/Toggle@2.1.0
+          Properties:
+            Height: =28
+            ShowLabel: =false
+            Width: =60
+            X: =368
+            Y: =92
+      - Toggle1_1:
+          Control: Classic/Toggle@2.1.0
+          Properties:
+            Height: =28
+            ShowLabel: =false
+            Width: =60
+            X: =368
+            Y: =184
+      - Toggle1_2:
+          Control: Classic/Toggle@2.1.0
+          Properties:
+            Height: =28
+            ShowLabel: =false
+            Width: =60
+            X: =368
+            Y: =244
+      - Toggle1_3:
+          Control: Classic/Toggle@2.1.0
+          Properties:
+            Height: =28
+            ShowLabel: =false
+            Width: =60
+            X: =368
+            Y: =296
+      - Toggle1_4:
+          Control: Classic/Toggle@2.1.0
+          Properties:
+            Height: =28
+            ShowLabel: =false
+            Width: =60
+            X: =368
+            Y: =349
+      - Toggle1_5:
+          Control: Classic/Toggle@2.1.0
+          Properties:
+            Height: =28
+            ShowLabel: =false
+            Width: =60
+            X: =368
+            Y: =463
+      - Toggle1_6:
+          Control: Classic/Toggle@2.1.0
+          Properties:
+            Height: =28
+            ShowLabel: =false
+            Width: =60
+            X: =368
+            Y: =613
+      - Toggle1_7:
+          Control: Classic/Toggle@2.1.0
+          Properties:
+            Height: =28
+            ShowLabel: =false
+            Width: =60
+            X: =368
+            Y: =663
+      - Toggle1_8:
+          Control: Classic/Toggle@2.1.0
+          Properties:
+            Height: =28
+            ShowLabel: =false
+            Width: =60
+            X: =368
+            Y: =716
+      - Toggle1_9:
+          Control: Classic/Toggle@2.1.0
+          Properties:
+            Height: =28
+            ShowLabel: =false
+            Width: =60
+            X: =368
+            Y: =773
+      - Toggle1_10:
+          Control: Classic/Toggle@2.1.0
+          Properties:
+            Height: =28
+            ShowLabel: =false
+            Width: =60
+            X: =368
+            Y: =844
+      - Toggle1_11:
+          Control: Classic/Toggle@2.1.0
+          Properties:
+            Height: =28
+            ShowLabel: =false
+            Width: =60
+            X: =368
+            Y: =886
+      - Toggle1_12:
+          Control: Classic/Toggle@2.1.0
+          Properties:
+            Height: =28
+            ShowLabel: =false
+            Width: =60
+            X: =368
+            Y: =546
+      - Toggle1_13:
+          Control: Classic/Toggle@2.1.0
+          Properties:
+            Height: =28
+            ShowLabel: =false
+            Width: =60
+            X: =368
+            Y: =416
+      - Toggle1_14:
+          Control: Classic/Toggle@2.1.0
+          Properties:
+            Height: =28
+            ShowLabel: =false
+            Width: =60
+            X: =368
+            Y: =138

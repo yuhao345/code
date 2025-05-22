@@ -1,0 +1,152 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  EDIT:
+    Properties:
+      Height: =956
+      Width: =440
+    Children:
+      - Ellipse 1_1:
+          Control: Image@2.2.3
+          Properties:
+            Height: =103
+            Image: =image9533
+            Width: =103
+            X: =168
+            Y: =72
+      - Edit profile:
+          Control: Label@2.5.1
+          Properties:
+            Height: =39
+            Text: ="Edit profile"
+            Width: =167
+            X: =138
+            Y: =33
+      - Drill-in_4:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            Height: =22
+            Text: "=\"\U0010018A\""
+            Width: =15
+            X: =350
+            Y: =606
+      - Drill-in_6:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            Height: =22
+            Text: "=\"\U0010018A\""
+            Width: =15
+            X: =350
+            Y: =722
+      - Arrow1_13:
+          Control: Arrow@2.3.0
+          Variant: BackArrow
+          Properties:
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =80
+            OnSelect: =Back()
+            Width: =73
+            X: =22
+            Y: =21
+      - Button22:
+          Control: Classic/Button@2.2.0
+          Properties:
+            Fill: =RGBA(0, 0, 0, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            OnSelect: =Navigate(Editname)
+            RadiusBottomLeft: =60
+            RadiusBottomRight: =60
+            RadiusTopLeft: =60
+            RadiusTopRight: =60
+            Text: ="Name"
+            Width: =310
+            X: =66
+            Y: =385
+      - Button23:
+          Control: Classic/Button@2.2.0
+          Properties:
+            Fill: =RGBA(0, 0, 0, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            OnSelect: =Navigate('community ID')
+            RadiusBottomLeft: =60
+            RadiusBottomRight: =60
+            RadiusTopLeft: =60
+            RadiusTopRight: =60
+            Text: ="ID"
+            Width: =309
+            X: =67
+            Y: =193
+      - Button24:
+          Control: Classic/Button@2.2.0
+          Properties:
+            Fill: =RGBA(0, 0, 0, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            OnSelect: =Navigate(Gender)
+            RadiusBottomLeft: =60
+            RadiusBottomRight: =60
+            RadiusTopLeft: =60
+            RadiusTopRight: =60
+            Text: ="Gender"
+            Width: =310
+            X: =67
+            Y: =284
+      - Button22_1:
+          Control: Classic/Button@2.2.0
+          Properties:
+            Fill: =RGBA(0, 0, 0, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            OnSelect: =Navigate(job)
+            RadiusBottomLeft: =60
+            RadiusBottomRight: =60
+            RadiusTopLeft: =60
+            RadiusTopRight: =60
+            Text: ="job"
+            Width: =310
+            X: =66
+            Y: =494
+      - Button22_2:
+          Control: Classic/Button@2.2.0
+          Properties:
+            Fill: =RGBA(0, 0, 0, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            OnSelect: =Navigate(birthdate)
+            RadiusBottomLeft: =60
+            RadiusBottomRight: =60
+            RadiusTopLeft: =60
+            RadiusTopRight: =60
+            Text: ="Birthday"
+            Width: =310
+            X: =64
+            Y: =596
+      - Button22_3:
+          Control: Classic/Button@2.2.0
+          Properties:
+            Fill: =RGBA(0, 0, 0, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            OnSelect: =Navigate(location)
+            RadiusBottomLeft: =60
+            RadiusBottomRight: =60
+            RadiusTopLeft: =60
+            RadiusTopRight: =60
+            Text: ="Region "
+            Width: =310
+            X: =64
+            Y: =705
+      - Button22_4:
+          Control: Classic/Button@2.2.0
+          Properties:
+            Fill: =RGBA(0, 42, 74, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            OnSelect: =Navigate(user)
+            Text: ="Save"
+            Width: =310
+            X: =64
+            Y: =831

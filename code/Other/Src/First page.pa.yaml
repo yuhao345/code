@@ -1,0 +1,114 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  First page:
+    Properties:
+      Fill: =RGBA(230, 230, 230, 1)
+    Children:
+      - Image4:
+          Control: Image@2.2.3
+          Properties:
+            Height: =1136
+            Image: ='1435-jpg-1200-1200-false'
+            ImagePosition: =ImagePosition.Fill
+            Transparency: =70%
+            Width: =640
+      - Label3:
+          Control: Label@2.5.1
+          Properties:
+            BorderStyle: =BorderStyle.None
+            Font: =Font.'Patrick Hand'
+            FontWeight: =FontWeight.Bold
+            Height: =116
+            Size: =60
+            Text: ="Welcome"
+            Width: =297
+            X: =171
+            Y: =236
+      - Label4:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            Font: =Font.'Patrick Hand'
+            Height: =97
+            Size: =30
+            Text: |-
+              ="Enjoy community services, 
+              experience community culture."
+            X: =40
+            Y: =487
+      - Button1_2:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =3
+            Color: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(230, 230, 230, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Open Sans Condensed'
+            Height: =85
+            HoverBorderColor: =RGBA(179, 179, 179, 1)
+            OnSelect: =Navigate(Register_2)
+            RadiusBottomLeft: =60
+            RadiusBottomRight: =60
+            RadiusTopLeft: =60
+            RadiusTopRight: =60
+            Size: =32
+            Text: ="register"
+            Width: =445
+            X: =97
+            Y: =861
+      - Button1_1:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.Dashed
+            Fill: =RGBA(0, 0, 0, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Open Sans Condensed'
+            Height: =67
+            HoverBorderColor: =RGBA(179, 179, 179, 1)
+            OnSelect: =Navigate(loginpage)
+            RadiusBottomLeft: =60
+            RadiusBottomRight: =60
+            RadiusTopLeft: =60
+            RadiusTopRight: =60
+            Size: =32
+            Text: ="login "
+            Width: =460
+            X: =90
+            Y: =764
+      - Arrow1_7:
+          Control: Arrow@2.3.0
+          Variant: BackArrow
+          Properties:
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =80
+            Visible: =false
+            Width: =80
+            X: =22
+            Y: =21
+      - 9 Followers_1:
+          Control: Label@2.5.1
+          Properties:
+            Height: =46
+            Text: |-
+              ="      9
+                  Likes"
+            Width: =83
+            X: =40
+            Y: =40
+      - Form2:
+          Control: Form@2.4.3
+          Variant: Classic
+          Layout: Vertical
+          Properties:
+            Width: =440
+            Y: =60

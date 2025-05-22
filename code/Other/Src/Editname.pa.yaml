@@ -1,0 +1,57 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Editname:
+    Properties:
+      Height: =956
+      Width: =440
+    Children:
+      - Edit Name:
+          Control: Label@2.5.1
+          Properties:
+            FontWeight: =FontWeight.Bold
+            Height: =39
+            Text: ="Edit Name"
+            Width: =160
+            X: =138
+            Y: =33
+      - Arrow1_9:
+          Control: Arrow@2.3.0
+          Variant: BackArrow
+          Properties:
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =64
+            OnSelect: =Back()
+            Width: =65
+            X: =13
+            Y: =6
+      - Button25:
+          Control: Classic/Button@2.2.0
+          Properties:
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Lato Black'
+            OnSelect: =Navigate(EDIT,ScreenTransition.Fade)
+            Text: |-
+              ="CONFIRM
+              "
+            X: =78
+            Y: =877
+      - new_name_3:
+          Control: Classic/TextInput@2.3.2
+          Properties:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Default: =
+            HintText: ="Enter name :"
+            RadiusBottomLeft: =30
+            RadiusBottomRight: =30
+            RadiusTopLeft: =30
+            RadiusTopRight: =30
+            Width: =418
+            X: =10
+            Y: =181

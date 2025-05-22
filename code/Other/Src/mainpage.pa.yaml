@@ -1,0 +1,349 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  mainpage:
+    Properties:
+      Fill: |-
+        =RGBA(
+            255,
+            255,
+            255,
+            1
+        )
+      Height: =956
+      Width: =440
+    Children:
+      - nearby:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            Height: =35
+            Text: ="nearby"
+            Width: =95
+            X: =16
+            Y: =77
+      - Activities:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            Height: =34
+            Text: |-
+              ="Activities
+              "
+            Width: =150
+            X: =290
+            Y: =77
+      - news:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            Height: =35
+            Text: ="news"
+            Width: =100
+            X: =157
+            Y: =77
+      - main content:
+          Control: GroupContainer@1.3.0
+          Variant: ManualLayout
+          Properties:
+            Height: =844
+            Width: =451
+            Y: =112
+          Children:
+            - Frame 2:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  Height: =344
+                  Width: =215
+                  Y: =10
+                Children:
+                  - image 1_1:
+                      Control: Image@2.2.3
+                      Properties:
+                        Height: =384
+                        Image: =image569
+                        Width: =215.1693115234375
+                  - 7ba86caef8fe16e9d806795aeb78296 1:
+                      Control: Image@2.2.3
+                      Properties:
+                        Height: =344
+                        Image: =image9464
+                        Width: =210.38314819335938
+                        X: =5
+            - Frame 2_1:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  Height: =351
+                  Width: =215
+                  X: =215
+                Children:
+                  - image 1_2:
+                      Control: Image@2.2.3
+                      Properties:
+                        Height: =384
+                        Image: =image560
+                        Width: =215.1693115234375
+                  - 0399c8a4b40ccd0b74f2bd6bdda04f5 1:
+                      Control: Image@2.2.3
+                      Properties:
+                        Height: =344
+                        Image: =image9467
+                        Width: =210
+                        X: =3
+                        Y: =7
+            - Frame 2_2:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  Height: =344
+                  Width: =210
+                  X: =3
+                  Y: =350
+                Children:
+                  - image 1_3:
+                      Control: Image@2.2.3
+                      Properties:
+                        Height: =384
+                        Image: =image563
+                        Width: =215.1693115234375
+                  - fbad9db871fc35cab95a510e14752a3 1:
+                      Control: Image@2.2.3
+                      Properties:
+                        Height: =344
+                        Image: =image9469
+                        Width: =215
+            - Frame 11_1:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  Height: =344
+                  Width: =215
+                  Y: =1384
+                Children:
+                  - image 1_4:
+                      Control: Image@2.2.3
+                      Properties:
+                        Height: =384
+                        Image: =image595
+                        Width: =215.1693115234375
+            - Frame 10_1:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  Height: =344
+                  Width: =215
+                  X: =213
+                  Y: =1044
+                Children:
+                  - image 1_5:
+                      Control: Image@2.2.3
+                      Properties:
+                        Height: =384
+                        Image: =image592
+                        Width: =215.1693115234375
+            - Frame 9_1:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  Height: =344
+                  Width: =215
+                  X: =5
+                  Y: =1040
+                Children:
+                  - image 1_6:
+                      Control: Image@2.2.3
+                      Properties:
+                        Height: =384
+                        Image: =image589
+                        Width: =215.1693115234375
+            - Frame 8:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  Height: =344
+                  Width: =215
+                  X: =212
+                  Y: =700
+                Children:
+                  - image 1_7:
+                      Control: Image@2.2.3
+                      Properties:
+                        Height: =384
+                        Image: =image586
+                        Width: =215.1693115234375
+            - Frame 7:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  Height: =344
+                  Width: =215
+                  X: =6
+                  Y: =703
+                Children:
+                  - image 1_8:
+                      Control: Image@2.2.3
+                      Properties:
+                        Height: =384
+                        Image: =image583
+                        Width: =215.1693115234375
+                  - e4aa38ba21602cf319391959b3860d8 1:
+                      Control: Image@2.2.3
+                      Properties:
+                        Height: =344
+                        Image: =image94857
+                        Width: =210
+            - Frame 6_1:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  Height: =345.8759460449219
+                  Width: =218.01446533203125
+                  X: =212
+                  Y: =354
+                Children:
+                  - image 1_9:
+                      Control: Image@2.2.3
+                      Properties:
+                        Height: =385.8758850097656
+                        Image: =image566
+                        Width: =218.53526306152344
+            - Frame 12_1:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  Height: =344
+                  Width: =215
+                  X: =215
+                  Y: =1386
+                Children:
+                  - image 1_10:
+                      Control: Image@2.2.3
+                      Properties:
+                        Height: =384
+                        Image: =image598
+                        Width: =215.1693115234375
+            - Frame 2_3:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  Height: =344
+                  Width: =215
+                  X: =5
+                  Y: =1731
+                Children:
+                  - image 1_11:
+                      Control: Image@2.2.3
+                      Properties:
+                        Height: =384
+                        Image: =image5101
+                        Width: =215.1693115234375
+            - Frame 2_4:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  Height: =344
+                  Width: =215
+                  X: =220
+                  Y: =1731
+                Children:
+                  - image 1_12:
+                      Control: Image@2.2.3
+                      Properties:
+                        Height: =384
+                        Image: =image5104
+                        Width: =215.1693115234375
+            - 548bb247b2b0ee9b0a246d746b58097 1:
+                Control: Image@2.2.3
+                Properties:
+                  Height: =344
+                  Image: =image94643
+                  Width: =215
+                  X: =213
+                  Y: =355
+            - d6d4fe63158109a2b1e54712cfa8e2a 1:
+                Control: Image@2.2.3
+                Properties:
+                  Height: =361
+                  Image: =image941055
+                  Width: =210
+                  X: =218
+                  Y: =704
+      - basic user page_2:
+          Control: GroupContainer@1.3.0
+          Variant: ManualLayout
+          Properties:
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =84
+            Width: =440
+            Y: =880
+          Children:
+            - Icon4:
+                Control: Classic/Icon@2.5.0
+                Properties:
+                  BorderColor: =RGBA(255, 255, 255, 1)
+                  BorderStyle: =BorderStyle.Dashed
+                  Color: =RGBA(0, 0, 0, 1)
+                  FocusedBorderThickness: =0
+                  Height: =50
+                  Icon: =Icon.Home
+                  OnSelect: =Navigate(mainpage)
+                  Width: =50
+                  X: =53
+                  Y: =18
+            - Icon5:
+                Control: Classic/Icon@2.5.0
+                Properties:
+                  Color: =RGBA(0, 0, 0, 1)
+                  Height: =50
+                  Icon: =Icon.Add
+                  Width: =50
+                  X: =192
+                  Y: =18
+            - Icon7:
+                Control: Classic/Icon@2.5.0
+                Properties:
+                  Color: =RGBA(0, 0, 0, 1)
+                  Height: =50
+                  Icon: =Icon.Person
+                  OnSelect: =Navigate(user)
+                  Width: =50
+                  X: =330
+                  Y: =18
+      - Frame 9_2:
+          Control: GroupContainer@1.3.0
+          Variant: ManualLayout
+          Properties:
+            BorderStyle: =BorderStyle.Dashed
+            BorderThickness: =1
+            Height: =43
+            Width: =326
+            X: =57
+            Y: =34
+          Children:
+            - Icon2_1:
+                Control: Classic/Icon@2.5.0
+                Properties:
+                  Color: =RGBA(0, 0, 0, 1)
+                  Height: =25
+                  Icon: =Icon.Search
+                  Width: =25
+                  X: =285
+                  Y: =10
+            - Icon3_1:
+                Control: Classic/Icon@2.5.0
+                Properties:
+                  Color: =RGBA(0, 0, 0, 1)
+                  Height: =25
+                  Icon: =Icon.Camera
+                  Width: =25
+                  X: =14
+                  Y: =10

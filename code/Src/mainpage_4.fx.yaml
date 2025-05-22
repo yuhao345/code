@@ -1,0 +1,267 @@
+mainpage_4 As screen:
+    ContentLanguage: =""
+    Fill: |-
+        =RGBA(
+            255,
+            255,
+            255,
+            1
+        )
+    Height: =956
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+    Width: =440
+
+    "'Frame 9_6' As groupContainer.manualLayoutContainer":
+        BorderThickness: =3
+        DropShadow: =DropShadow.Light
+        Height: =43
+        maximumHeight: =11360
+        maximumWidth: =640
+        RadiusBottomLeft: =40
+        RadiusBottomRight: =40
+        RadiusTopLeft: =40
+        RadiusTopRight: =40
+        Width: =440
+        Y: =35
+        ZIndex: =1
+
+        Icon3_5 As icon:
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =25
+            Icon: =Icon.Camera
+            Width: =25
+            X: =14
+            Y: =10
+            ZIndex: =1
+
+        Icon2_5 As icon:
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =25
+            Icon: =Icon.Search
+            Width: =25
+            X: =398
+            Y: =10
+            ZIndex: =2
+
+    "Gallery1_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderColor: =App.Theme.Colors.Darker40
+        DelayItemLoading: =true
+        Items: =CustomGallerySample
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =104
+        Width: =440
+        Y: =40
+        ZIndex: =2
+
+        Rectangle4_2 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
+            Fill: =App.Theme.Colors.Darker30
+            Height: =Parent.TemplateHeight - Separator2_2.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =3
+
+        NextArrow2_2 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(166, 166, 166, 1)
+            Height: =50
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Tooltip: ="查看项详细信息"
+            Width: =50
+            X: =Parent.TemplateWidth - Self.Width - 12
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator2_2 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+    Activities_4 As label:
+        Align: =Align.Center
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        Size: =21
+        Text: |-
+            ="Activities
+            "
+        Width: =440
+        X: =14
+        Y: =78
+        ZIndex: =3
+
+    nearby_4 As label:
+        Align: =Align.Center
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        Size: =21
+        Text: ="nearby"
+        Width: =440
+        X: =168
+        Y: =78
+        ZIndex: =4
+
+    news_4 As label:
+        Align: =Align.Center
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        Size: =21
+        Text: ="news"
+        Width: =440
+        X: =314
+        Y: =78
+        ZIndex: =5
+
+    "'7ba86caef8fe16e9d806795aeb78296 1_4' As image":
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =368
+        Image: ='1234764573'
+        ImagePosition: =ImagePosition.Fill
+        OnSelect: =Navigate('picture 1 inside')
+        Width: =220
+        Y: =123
+        ZIndex: =6
+
+    "'fbad9db871fc35cab95a510e14752a3 1_4' As image":
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =368
+        Image: ='538891885'
+        ImagePosition: =ImagePosition.Fill
+        Width: =220
+        X: =220
+        Y: =123
+        ZIndex: =7
+
+    "'0399c8a4b40ccd0b74f2bd6bdda04f5 1_4' As image":
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =368
+        Image: ='693209438'
+        ImagePosition: =ImagePosition.Fill
+        Width: =220
+        Y: =491
+        ZIndex: =8
+
+    "'548bb247b2b0ee9b0a246d746b58097 1_4' As image":
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =368
+        Image: ='931834404'
+        ImagePosition: =ImagePosition.Fill
+        Width: =220
+        X: =220
+        Y: =491
+        ZIndex: =9
+
+    Rectangle1_3 As rectangle:
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =49
+        Width: =181
+        X: =133
+        Y: =823
+        ZIndex: =10
+
+    Icon6_3 As icon:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =40
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Navigate(mainpage_1)
+        Width: =40
+        X: =133
+        Y: =828
+        ZIndex: =11
+
+    Icon8_3 As icon:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =40
+        Icon: =Icon.ChevronRight
+        Width: =40
+        X: =269
+        Y: =828
+        ZIndex: =12
+
+    "'basic user page_6' As groupContainer.manualLayoutContainer":
+        BorderStyle: =BorderStyle.None
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =84
+        maximumHeight: =11360
+        maximumWidth: =640
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =440
+        Y: =872
+        ZIndex: =13
+
+        Icon4_5 As icon:
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderStyle: =BorderStyle.Dashed
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =0
+            Height: =50
+            Icon: =Icon.Home
+            OnSelect: =Navigate(mainpage_4)
+            Width: =50
+            X: =53
+            Y: =18
+            ZIndex: =6
+
+        Icon5_5 As icon:
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =50
+            Icon: =Icon.Add
+            Width: =50
+            X: =192
+            Y: =18
+            ZIndex: =7
+
+        Icon7_5 As icon:
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =50
+            Icon: =Icon.Person
+            OnSelect: =Navigate(USER)
+            Width: =50
+            X: =330
+            Y: =18
+            ZIndex: =8
+

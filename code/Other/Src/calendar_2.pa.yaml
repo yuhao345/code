@@ -1,0 +1,274 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  calendar_2:
+    Properties:
+      OnVisible: |+
+        =
+        Set(varMonthOffset, 0);
+
+        Set(
+            varCurrentDate,
+            Date(Year(Today()), Month(Today()) + varMonthOffset, 1)
+        );
+
+        Set(
+            varStartDate,
+            DateAdd(
+                varCurrentDate,
+                -Weekday(varCurrentDate) + 1,
+                "Days"
+            )
+        );
+
+        ClearCollect(
+            colCalendar,
+            ForAll(
+                Sequence(42),
+                {
+                    MyDate: DateAdd(varStartDate, ThisRecord.Value - 1, "Days")
+                }
+            )
+        );
+        ClearCollect(colNotes, []);
+        Set(varShowNotePopup, false);
+        Set(varSelectedDate, Blank());
+    Children:
+      - Gallery5_2:
+          Control: Gallery@2.15.0
+          Variant: BrowseLayout_Vertical_OneTextVariant_ver5.0
+          Properties:
+            Height: =95
+            Items: =Calendar.WeekdaysShort()
+            WrapCount: =7
+            Y: =40
+          Children:
+            - Title5_2:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  BorderColor: =RGBA(0, 0, 0, 1)
+                  Color: =RGBA(50, 49, 48, 1)
+                  FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                  Height: =32
+                  OnSelect: =Select(Parent)
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0
+                  PaddingTop: =0
+                  Size: =19
+                  Text: =ThisItem.Value
+                  VerticalAlign: =VerticalAlign.Top
+                  Width: =65
+                  X: =16
+                  Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            - Separator6_2:
+                Control: Rectangle@2.3.0
+                Properties:
+                  Fill: =RGBA(255, 255, 255, 1)
+                  Height: =8
+                  OnSelect: =Select(Parent)
+                  Width: =Parent.TemplateWidth
+                  Y: =Parent.TemplateHeight - Self.Height
+      - Container4_2:
+          Control: GroupContainer@1.3.0
+          Variant: ManualLayout
+          Properties:
+            Visible: |+
+              =showAddPopup
+            X: =60
+            Y: =60
+          Children:
+            - txtNewContent_2:
+                Control: Classic/TextInput@2.3.2
+                Properties:
+                  Default: =""""""
+                  Height: =153
+                  HintText: ="""Enter your note here"""
+                  Width: =320
+                  X: =40
+                  Y: =72
+            - dpNewDate_2:
+                Control: DatePicker@0.0.44
+                Properties:
+                  X: =40
+                  Y: =40
+            - save1_1:
+                Control: Button@0.0.45
+                Properties:
+                  OnSelect: |+
+                    =Collect(
+                        NoteCollection,
+                        {
+                            Date: If(IsBlank(dpNewDate_2.SelectedDate), Now(), dpNewDate_2.SelectedDate),
+                            Note: If(IsBlank(txtNewContent_2.Text), "", txtNewContent_2.Text)
+                        }
+                    );
+                    UpdateContext({ showAddPopup: false });
+                    Reset(dpNewDate_2);
+                    Reset(txtNewContent_2);
+                  Text: ="save"
+                  X: =387
+                  Y: =168
+      - Gallery2_2:
+          Control: Gallery@2.15.0
+          Variant: BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0
+          Properties:
+            Height: =836
+            Items: =colCalendar
+            OnSelect: |+
+              =Set(selectedDate, ThisItem.MyDate)
+            TemplatePadding: =4
+            TemplateSize: =130
+            WrapCount: =7
+            Y: =90
+          Children:
+            - Label7_2:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  Color: |+
+                    =If(ThisItem.MyDate = Today(), Color.White, If(ThisItem.MyDate < Today(), Color.Gray, Color.Black))
+                  Fill: |+
+                    =If(ThisItem.MyDate = Today(), Color.LightBlue, Color.Transparent)
+                  Height: =104
+                  OnSelect: |+
+                    =Set(varSelectedDate, ThisItem.MyDate);
+                    Set(varShowNotePopup, true);
+                    Set(selectedDate, ThisItem.MyDate)
+
+                  Text: =ThisItem.MyDate
+                  Width: =86.85714285714286
+                  Y: =26
+            - Title1_2:
+                Control: Label@2.5.1
+                Properties:
+                  BorderColor: =RGBA(0, 0, 0, 1)
+                  Color: =RGBA(50, 49, 48, 1)
+                  FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                  Height: =Self.Size * 1.8
+                  OnSelect: =Select(Parent)
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0
+                  PaddingTop: =0
+                  Size: =14
+                  Text: =ThisItem.MyDate
+                  VerticalAlign: =VerticalAlign.Top
+                  Width: =Parent.TemplateWidth - 173
+                  X: =86.85714285714286
+                  Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle1_2.Size * 1.8)) / 2
+            - Subtitle1_2:
+                Control: Label@2.5.1
+                Properties:
+                  BorderColor: =RGBA(0, 0, 0, 1)
+                  FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                  Height: =Self.Size * 1.8
+                  OnSelect: =Select(Parent)
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0
+                  PaddingTop: =0
+                  Size: =12
+                  Text: =ThisItem.MyDate
+                  VerticalAlign: =VerticalAlign.Top
+                  Width: =Title1_2.Width
+                  X: =86.85714285714286
+                  Y: =Title1_2.Y + Title1_2.Height
+      - ButtonCanvas4_2:
+          Control: Button@0.0.45
+          Properties:
+            Height: =50
+            Icon: ="ArrowLeft"
+            OnSelect: |+
+              =Set(varMonthOffset, varMonthOffset - 1);
+              Set(varCurrentDate, Date(Year(Today()), Month(Today()) + varMonthOffset, 1));
+              Set(varStartDate, DateAdd(varCurrentDate, -Weekday(varCurrentDate) + 1, "Days"));
+              ClearCollect(
+                  colCalendar,
+                  ForAll(
+                      Sequence(42),
+                      {
+                          MyDate: DateAdd(varStartDate, ThisRecord.Value - 1, "Days")
+                      }
+                  )
+              );
+            Text: =
+            Width: =100
+            X: =95
+            Y: =980
+      - ButtonCanvas5_2:
+          Control: Button@0.0.45
+          Properties:
+            Height: =50
+            Icon: ="ArrowSync"
+            OnSelect: |+
+              =Set(varMonthOffset, 0);
+              Set(varCurrentDate, Date(Year(Today()), Month(Today()), 1));
+              Set(varStartDate, DateAdd(varCurrentDate, -Weekday(varCurrentDate) + 1, "Days"));
+              ClearCollect(
+                  colCalendar,
+                  ForAll(
+                      Sequence(42),
+                      {
+                          MyDate: DateAdd(varStartDate, ThisRecord.Value - 1, "Days")
+                      }
+                  )
+              );
+            Text: =
+            Width: =100
+            X: =276
+            Y: =980
+      - ButtonCanvas3_2:
+          Control: Button@0.0.45
+          Properties:
+            Height: =50
+            Icon: ="ArrowRight"
+            OnSelect: |+
+              =Set(varMonthOffset, varMonthOffset + 1);
+              Set(varCurrentDate, Date(Year(Today()), Month(Today()) + varMonthOffset, 1));
+              Set(varStartDate, DateAdd(varCurrentDate, -Weekday(varCurrentDate) + 1, "Days"));
+              ClearCollect(
+                  colCalendar,
+                  ForAll(
+                      Sequence(42),
+                      {
+                          MyDate: DateAdd(varStartDate, ThisRecord.Value - 1, "Days")
+                      }
+                  )
+              );
+            Text: =
+            Width: =100
+            X: =458
+            Y: =980
+      - btnInit_2:
+          Control: Button@0.0.45
+          Properties:
+            Height: =41
+            OnSelect: |+
+              =ClearCollect(NoteCollection, { Date: Today(), Content: "初始化示例" })
+            Text: ="btnInit"
+            Width: =110
+            X: =95
+            Y: =1057
+      - ButtonCanvas2_2:
+          Control: Button@0.0.45
+          Properties:
+            Align: =Align.Center
+            Height: =49
+            OnSelect: |+
+              =UpdateContext({ showAddPopup: true })
+            Width: =100
+            X: =276
+            Y: =1057
+      - ButtonCanvas7_2:
+          Control: Button@0.0.45
+          Properties:
+            X: =481
+            Y: =1074

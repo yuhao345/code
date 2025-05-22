@@ -1,0 +1,242 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  picture 1 inside:
+    Properties:
+      OnVisible: |-
+        =UpdateContext({
+            _currentCommentText: "",        
+            showMentionSuggestions: false,
+            mentionFilterTerm: ""       
+        });UpdateContext({ showCommentPopup: false }); 
+        ClearCollect(colComments, {});
+        UpdateContext({
+            _currentCommentTextToEdit: "",
+            showMentionSuggestionsPopup: false,  
+            mentionSearchFilter: ""             
+        });
+    Children:
+      - Icon9:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =50
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Navigate(mainpage_1)
+            Width: =50
+            X: =21
+            Y: =66
+      - Image3:
+          Control: Image@2.2.3
+          Properties:
+            Height: =434
+            Image: ='965307846'
+            ImagePosition: =ImagePosition.Fill
+            Width: =640
+            Y: =136
+      - Label10:
+          Control: Label@2.5.1
+          Properties:
+            Height: =60
+            Text: |-
+              ="Handsome guys
+              "
+            Width: =214
+            X: =130
+            Y: =61
+      - Circle2:
+          Control: Circle@2.3.0
+          Properties:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(204, 204, 204, 1)
+            Height: =50
+            Width: =50
+            X: =75
+            Y: =66
+      - Label11:
+          Control: Label@2.5.1
+          Properties:
+            Font: =Font.'Open Sans'
+            Height: =84
+            Text: |-
+              ="This is a cute koala!
+              Do you like it? : )"
+            Y: =647
+      - Label12:
+          Control: Label@2.5.1
+          Properties:
+            Font: =Font.'Open Sans'
+            FontWeight: =FontWeight.Bold
+            Size: =38
+            Text: ="Koala"
+            Y: =591
+      - Rectangle6:
+          Control: Rectangle@2.3.0
+          Properties:
+            Fill: =RGBA(230, 230, 230, 1)
+            Height: =64
+            Width: =640
+            Y: =1072
+      - Icon10:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =50
+            Icon: =Icon.Heart
+            Width: =50
+            X: =379
+            Y: =1079
+      - BtnShowCommentPopup:
+          Control: Classic/Button@2.2.0
+          Properties:
+            Color: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(204, 204, 204, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Height: =64
+            OnSelect: |-
+              =UpdateContext({ showCommentPopup: true })
+            Text: ="comment"
+            Width: =276
+            Y: =981
+      - Star2:
+          Control: Star@2.4.0
+          Variant: 5Points
+          Properties:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =3
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Width: =50
+            X: =532
+            Y: =1079
+      - GalCommentsDisplay:
+          Control: Gallery@2.15.0
+          Variant: BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0
+          Properties:
+            Height: =215
+            Items: =colComments
+            TemplateSize: =94
+            Y: =748
+          Children:
+            - NextArrow3:
+                Control: Classic/Icon@2.5.0
+                Properties:
+                  AccessibleLabel: =Self.Tooltip
+                  Color: =RGBA(166, 166, 166, 1)
+                  Height: =50
+                  Icon: =Icon.ChevronRight
+                  OnSelect: =Select(Parent)
+                  PaddingBottom: =16
+                  PaddingLeft: =16
+                  PaddingRight: =16
+                  PaddingTop: =16
+                  Tooltip: ="查看项详细信息"
+                  Width: =50
+                  X: =Parent.TemplateWidth - Self.Width - 12
+                  Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            - Separator4:
+                Control: Rectangle@2.3.0
+                Properties:
+                  Fill: =RGBA(255, 255, 255, 1)
+                  Height: =8
+                  OnSelect: =Select(Parent)
+                  Width: =Parent.TemplateWidth
+                  Y: =Parent.TemplateHeight - Self.Height
+            - Rectangle7:
+                Control: Rectangle@2.3.0
+                Properties:
+                  Fill: =App.Theme.Colors.Darker30
+                  Height: =Parent.TemplateHeight - Separator4.Height
+                  OnSelect: =Select(Parent)
+                  Visible: =ThisItem.IsSelected
+                  Width: =4
+            - LblCommentTextInGallery:
+                Control: Label@2.5.1
+                Properties:
+                  Height: =50
+                  OnSelect: =Select(Parent)
+                  Text: =_currentCommentText
+                  Width: =386
+                  X: =127
+                  Y: =21
+            - IconDeleteComment:
+                Control: Classic/Icon@2.5.0
+                Properties:
+                  Color: =RGBA(0, 0, 0, 1)
+                  Height: =40
+                  Icon: =Icon.Erase
+                  OnSelect: =Remove(colComments, ThisItem)
+                  Width: =40
+                  X: =550
+                  Y: =26
+            - LblDisplayNameInGallery:
+                Control: Label@2.5.1
+                Properties:
+                  FontWeight: =FontWeight.Bold
+                  Height: =63
+                  OnSelect: =Select(Parent)
+                  Size: =14
+                  Text: =ThisItem.CommentAuthor
+                  Width: =148
+                  X: =4
+                  Y: =14
+      - ContainerCommentPopup:
+          Control: GroupContainer@1.3.0
+          Variant: ManualLayout
+          Properties:
+            Fill: =RGBA(230, 230, 230, 1)
+            Height: =352
+            Visible: =showCommentPopup
+            Width: =640
+            Y: =500
+          Children:
+            - BtnSubmitComment:
+                Control: Classic/Button@2.2.0
+                Properties:
+                  FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                  OnSelect: "=Collect(colComments,\n    {\n        CommentID: CountRows(colComments) + 1,\n        CommentText: _currentCommentText, \n        CommentAuthor: If(IsBlank(Trim(TxtNicknameInput.Text)), User().FullName, Trim(TxtNicknameInput.Text)),\n        CommentTimestamp: Now()\n    }\n);\n\nUpdateContext({ _currentCommentText: \"\" }); \nReset(TxtNicknameInput);  \nUpdateContext({ showCommentPopup: false }); \nNotify(\"submitted!\", NotificationType.Success, 2000); "
+                  Text: |-
+                    ="submit
+                    "
+                  X: =360
+                  Y: =282
+            - TxtCommentInput:
+                Control: Classic/TextInput@2.3.2
+                Properties:
+                  Default: =_currentCommentTextToEdit
+                  Height: =230
+                  HintText: ="write your comment here"
+                  Mode: =TextMode.MultiLine
+                  OnChange: |
+                    =UpdateContext({ _currentCommentText: Self.Text });
+                  Width: =640
+                  Y: =51
+            - Label14:
+                Control: Label@2.5.1
+                Properties:
+                  Height: =51
+                  Text: ="Write your comments"
+                  Width: =536
+            - IconCloseCommentPopup:
+                Control: Classic/Icon@2.5.0
+                Properties:
+                  Height: =40
+                  Icon: =Icon.Cancel
+                  OnSelect: |-
+                    =UpdateContext({ showCommentPopup: false })
+                  Width: =40
+                  X: =584
+                  Y: =5
+            - TxtNicknameInput:
+                Control: Classic/TextInput@2.3.2
+                Properties:
+                  Default: =User().FullName
+                  HintText: ="enter your name"
+                  Width: =360
+                  Y: =282

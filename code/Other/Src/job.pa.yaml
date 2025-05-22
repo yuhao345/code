@@ -1,0 +1,60 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  job:
+    Properties:
+      Height: =956
+      Width: =440
+    Children:
+      - Edit Job:
+          Control: Label@2.5.1
+          Properties:
+            FontWeight: =FontWeight.Bold
+            Height: =39
+            Text: ="Edit Job"
+            Width: =128
+            X: =155
+            Y: =36
+      - Arrow1_3:
+          Control: Arrow@2.3.0
+          Variant: BackArrow
+          Properties:
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =70
+            OnSelect: =Navigate(EDIT)
+            Width: =75
+            X: =15
+            Y: =21
+      - Button9_1:
+          Control: Classic/Button@2.2.0
+          Properties:
+            Fill: =RGBA(0, 0, 0, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            OnSelect: =Navigate(EDIT)
+            RadiusBottomLeft: =60
+            RadiusBottomRight: =60
+            RadiusTopLeft: =60
+            RadiusTopRight: =60
+            Text: ="Confirm"
+            Width: =303
+            X: =68
+            Y: =697
+      - new_job:
+          Control: Classic/TextInput@2.3.2
+          Properties:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Default: =
+            HintText: ="Enter job :"
+            RadiusBottomLeft: =30
+            RadiusBottomRight: =30
+            RadiusTopLeft: =30
+            RadiusTopRight: =30
+            Width: =418
+            X: =10
+            Y: =181

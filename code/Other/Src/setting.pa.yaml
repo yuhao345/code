@@ -1,0 +1,96 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  setting:
+    Properties:
+      Height: =956
+      Width: =440
+    Children:
+      - Button5:
+          Control: Classic/Button@2.2.0
+          Properties:
+            Fill: =RGBA(0, 42, 74, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            OnSelect: =Navigate(accountsecurity )
+            RadiusBottomLeft: =60
+            RadiusBottomRight: =60
+            RadiusTopLeft: =60
+            RadiusTopRight: =60
+            Text: ="Account security "
+            X: =94
+            Y: =152
+      - Button7:
+          Control: Classic/Button@2.2.0
+          Properties:
+            Fill: =RGBA(0, 42, 74, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            OnSelect: =Navigate(notification)
+            RadiusBottomLeft: =60
+            RadiusBottomRight: =60
+            RadiusTopLeft: =60
+            RadiusTopRight: =60
+            Text: ="Notification "
+            X: =94
+            Y: =265
+      - Button8:
+          Control: Classic/Button@2.2.0
+          Properties:
+            Fill: =RGBA(0, 42, 74, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            OnSelect: =Navigate(language)
+            RadiusBottomLeft: =60
+            RadiusBottomRight: =60
+            RadiusTopLeft: =60
+            RadiusTopRight: =60
+            Text: ="Language setting "
+            Width: =275
+            X: =98
+            Y: =380
+      - Button10:
+          Control: Classic/Button@2.2.0
+          Properties:
+            Fill: =RGBA(0, 42, 74, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            RadiusBottomLeft: =60
+            RadiusBottomRight: =60
+            RadiusTopLeft: =60
+            RadiusTopRight: =60
+            Text: ="Theme setting "
+            X: =94
+            Y: =490
+      - Button11:
+          Control: Classic/Button@2.2.0
+          Properties:
+            Fill: =RGBA(0, 42, 74, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            OnSelect: =Navigate(about)
+            RadiusBottomLeft: =60
+            RadiusBottomRight: =60
+            RadiusTopLeft: =60
+            RadiusTopRight: =60
+            Text: ="About our app"
+            X: =94
+            Y: =603
+      - Arrow1_12:
+          Control: Arrow@2.3.0
+          Variant: BackArrow
+          Properties:
+            Height: =88
+            Width: =86
+            X: =12
+            Y: =12
+      - TextCanvas3:
+          Control: Text@0.0.51
+          Properties:
+            Height: =45
+            Size: =30
+            Text: ="Setting"
+            Width: =148
+            X: =179
+            Y: =40

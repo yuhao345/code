@@ -1,0 +1,139 @@
+"'First page' As screen":
+    Fill: =RGBA(230, 230, 230, 1)
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    Image4 As image:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =1136
+        Image: ='1435-jpg-1200-1200-false'
+        ImagePosition: =ImagePosition.Fill
+        Transparency: =70%
+        Width: =640
+        ZIndex: =1
+
+    Label3 As label:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Patrick Hand'
+        FontWeight: =FontWeight.Bold
+        Height: =116
+        Size: =60
+        Text: ="Welcome"
+        Width: =297
+        X: =171
+        Y: =236
+        ZIndex: =2
+
+    Label4 As label:
+        Align: =Align.Center
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Patrick Hand'
+        Height: =97
+        Size: =30
+        Text: |-
+            ="Enjoy community services, 
+            experience community culture."
+        Width: =560
+        X: =40
+        Y: =487
+        ZIndex: =3
+
+    Button1_2 As button:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =3
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(230, 230, 230, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Semibold
+        Height: =85
+        HoverBorderColor: =RGBA(179, 179, 179, 1)
+        HoverColor: =App.Theme.Colors.PrimaryForeground
+        HoverFill: =App.Theme.Colors.Darker10
+        OnSelect: =Navigate(Register_2)
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        RadiusBottomLeft: =60
+        RadiusBottomRight: =60
+        RadiusTopLeft: =60
+        RadiusTopRight: =60
+        Size: =32
+        Text: ="register"
+        Width: =445
+        X: =97
+        Y: =861
+        ZIndex: =4
+
+    Button1_1 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.Dashed
+        Color: =App.Theme.Colors.PrimaryForeground
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 0, 0, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Semibold
+        Height: =67
+        HoverBorderColor: =RGBA(179, 179, 179, 1)
+        HoverColor: =App.Theme.Colors.PrimaryForeground
+        HoverFill: =App.Theme.Colors.Darker10
+        OnSelect: =Navigate(loginpage)
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        RadiusBottomLeft: =60
+        RadiusBottomRight: =60
+        RadiusTopLeft: =60
+        RadiusTopRight: =60
+        Size: =32
+        Text: ="login "
+        Width: =460
+        X: =90
+        Y: =764
+        ZIndex: =5
+
+    Arrow1_7 As arrow.backArrow:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =80
+        Visible: =false
+        Width: =80
+        X: =22
+        Y: =21
+        ZIndex: =6
+
+    "'9 Followers_1' As label":
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        Height: =46
+        Size: =21
+        Text: |-
+            ="      9
+                Likes"
+        Width: =83
+        X: =40
+        Y: =40
+        ZIndex: =7
+
+    Form2 As form:
+        BorderColor: =App.Theme.Colors.Darker40
+        Width: =440
+        Y: =60
+        ZIndex: =8
+

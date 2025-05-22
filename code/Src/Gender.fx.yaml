@@ -1,0 +1,114 @@
+Gender As screen:
+    Fill: =Color.White
+    Height: =956
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+    Width: =440
+
+    "'Edit Gender' As label":
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        Height: =39
+        Size: =21
+        Text: ="Edit Gender"
+        Width: =183
+        X: =130
+        Y: =33
+        ZIndex: =2
+
+    Arrow1_15 As arrow.backArrow:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        Fill: =App.Theme.Colors.Primary
+        Height: =88
+        OnSelect: =Navigate(EDIT, ScreenTransition.Fade)
+        Width: =86
+        X: =12
+        Y: =12
+        ZIndex: =16
+
+    Button9_6 As button:
+        BorderColor: =App.Theme.Colors.Primary
+        Color: =App.Theme.Colors.PrimaryForeground
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 0, 0, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =App.Theme.Colors.PrimaryForeground
+        HoverFill: =App.Theme.Colors.Darker10
+        OnSelect: =Navigate(EDIT)
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        RadiusBottomLeft: =60
+        RadiusBottomRight: =60
+        RadiusTopLeft: =60
+        RadiusTopRight: =60
+        Size: =24
+        Text: ="Confirm"
+        Width: =361
+        X: =41
+        Y: =827
+        ZIndex: =17
+
+    Button9_7 As button:
+        BorderColor: =App.Theme.Colors.Primary
+        Color: =App.Theme.Colors.PrimaryForeground
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =App.Theme.Colors.Primary
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =App.Theme.Colors.PrimaryForeground
+        HoverFill: =App.Theme.Colors.Darker10
+        OnSelect: =Set(gblClicked, true)
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        Size: =24
+        Text: ="Female "
+        Width: =280
+        X: =61
+        Y: =234
+        ZIndex: =18
+
+    Button9_8 As button:
+        BorderColor: =App.Theme.Colors.Primary
+        Color: =App.Theme.Colors.PrimaryForeground
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =App.Theme.Colors.Primary
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =App.Theme.Colors.PrimaryForeground
+        HoverFill: =App.Theme.Colors.Darker10
+        OnSelect: =Set(gblClicked, true )
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        Size: =24
+        Text: |-
+            =
+            If (gblClicked,
+            "You're male",
+            "Male"
+            )
+        Width: =280
+        X: =61
+        Y: =134
+        ZIndex: =19
+

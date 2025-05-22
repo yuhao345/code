@@ -1,0 +1,209 @@
+xiangxi As screen:
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+    OnVisible: |-
+        =
+        ClearCollect(
+            colUsers,
+            ForAll(
+                Filter(Database, !IsBlank(Username)),
+                { text: "Username"}
+            )
+        );
+        ClearCollect(
+            colComments,
+            Table(
+                { Text: "", Created: Now() }
+            )
+        );
+        
+        UpdateContext({
+            _commentText: "",
+            mentionTriggered: false,
+            mentionTerm: "",
+            showCommentPopup: false
+        });
+
+    "Gallery7 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderColor: =App.Theme.Colors.Darker40
+        DelayItemLoading: =true
+        Items: |
+            =Sort(colComments, Created, SortOrder.Ascending)
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =104
+        Y: =363
+        ZIndex: =2
+
+        Title6 As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Text
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 173
+            X: =102
+            Y: =45
+            ZIndex: =2
+
+    btnComment As 按钮:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: |-
+            =UpdateContext({ showCommentPopup: true })
+        Text: ="Comments"
+        Width: =96
+        X: =40
+        Y: =40
+        ZIndex: =3
+
+    Container8 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =225
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: =showCommentPopup
+        X: =80
+        Y: =80
+        ZIndex: =4
+
+        btnSubmit As 按钮:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            OnSelect: |
+                =Collect(colComments, {
+                    Text: _commentText,
+                    Created: Now()
+                });
+                UpdateContext({
+                    _commentText: "",
+                    showCommentPopup: false
+                });
+                UpdateContext({ showCommentPopup: false })
+            Text: ="Submit"
+            Visible: =showCommentPopup
+            Width: =96
+            X: =300
+            Y: =100
+            ZIndex: =1
+
+        TextInput_Comment As 文本输入:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            OnChange: =
+            Value: =_commentText
+            Width: =320
+            X: =40
+            Y: =40
+            ZIndex: =2
+
+        ButtonCanvas6 As 按钮:
+            DisplayMode: =DisplayMode.Edit
+            Height: =30
+            Icon: ="Dismiss"
+            OnSelect: |-
+                =UpdateContext({
+                  showCommentPopup: false,
+                  mentionTriggered: false,
+                  mentionTerm: ""
+                })
+            Text: =
+            Width: =47
+            X: =411
+            Y: =10
+            ZIndex: =3
+
+        "galMentionList As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            BorderColor: =App.Theme.Colors.Darker40
+            DelayItemLoading: =true
+            Height: =136
+            Items: =Database
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplatePadding: =0
+            TemplateSize: =40
+            Visible: =showCommentPopup && mentionTriggered
+            Width: =254
+            Y: =75
+            ZIndex: =5
+
+            Label5 As label:
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
+                Height: =33
+                OnSelect: |
+                    =UpdateContext({
+                        _commentText: 
+                            Left(_commentText, Len(_commentText) - Len(mentionTerm)) & ThisItem.Username,
+                    
+                        mentionTriggered: false,
+                        mentionTerm: ""
+                    });
+                Size: =13
+                Text: =ThisItem.Username
+                Width: =85
+                ZIndex: =2
+
+    Timer1 As timer:
+        AutoStart: =true
+        BorderColor: =App.Theme.Colors.Primary
+        Color: =App.Theme.Colors.PrimaryForeground
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Duration: =300
+        Fill: =App.Theme.Colors.Primary
+        Font: =App.Theme.Font
+        Height: =70
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =App.Theme.Colors.PrimaryForeground
+        HoverFill: =App.Theme.Colors.Darker10
+        OnTimerEnd: |
+            =UpdateContext({ _commentText: TextInput_Comment.Value });
+            
+            If(
+                Right(_commentText, 1) = "@",
+                UpdateContext({
+                    mentionTriggered: true,
+                    mentionTerm: ""
+                })
+            );
+            
+            If(
+                mentionTriggered,
+                UpdateContext({
+                    mentionTerm: Last(Split(_commentText, "@")).Value
+                })
+            );
+            With(
+                {
+                    pieces: Split(_commentText, "@")
+                },
+                UpdateContext({
+                    mentionTerm: Last(pieces).Value,
+                    mentionTriggered: EndsWith(_commentText, "@" & Last(pieces).Value)
+                })
+            )
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        Repeat: =true
+        Start: =showCommentPopup
+        Visible: =false
+        Width: =280
+        X: =117
+        Y: =351
+        ZIndex: =5
+

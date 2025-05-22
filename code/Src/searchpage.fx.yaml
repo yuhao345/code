@@ -1,0 +1,195 @@
+searchpage As screen:
+    Fill: =Color.White
+    Height: =956
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+    Width: =440
+
+    "'Frame 9' As groupContainer.manualLayoutContainer":
+        BorderThickness: =3
+        ContentLanguage: =
+        DropShadow: =DropShadow.Light
+        Height: =43
+        LayoutMode: ="manual"
+        RadiusBottomLeft: =40
+        RadiusBottomRight: =40
+        RadiusTopLeft: =40
+        RadiusTopRight: =40
+        Width: =326
+        X: =57
+        Y: =34
+        ZIndex: =2
+
+        Icon2 As icon.Search:
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =25
+            Icon: =Icon.Search
+            Width: =25
+            X: =285
+            Y: =10
+            ZIndex: =5
+
+        Icon3 As icon.Camera:
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =25
+            Icon: =Icon.Camera
+            Width: =25
+            X: =14
+            Y: =10
+            ZIndex: =6
+
+    "'Frame 10' As groupContainer.manualLayoutContainer":
+        DropShadow: =DropShadow.Light
+        Height: =28
+        LayoutMode: ="manual"
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =72
+        X: =36
+        Y: =126
+        ZIndex: =5
+
+        exercise As label:
+            Align: =Align.Center
+            AutoHeight: =true
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Bold
+            Height: =28
+            Size: =11
+            Text: ="exercise"
+            Width: =72
+            ZIndex: =6
+
+    "'Frame 15' As groupContainer.manualLayoutContainer":
+        DropShadow: =DropShadow.Light
+        Height: =28
+        LayoutMode: ="manual"
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =72
+        X: =330
+        Y: =209
+        ZIndex: =7
+
+    "'Frame 14' As groupContainer.manualLayoutContainer":
+        DropShadow: =DropShadow.Light
+        Height: =28
+        LayoutMode: ="manual"
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =72
+        X: =184
+        Y: =209
+        ZIndex: =8
+
+    "'Frame 13' As groupContainer.manualLayoutContainer":
+        DropShadow: =DropShadow.Light
+        Height: =28
+        LayoutMode: ="manual"
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =72
+        X: =40
+        Y: =209
+        ZIndex: =9
+
+        "'community service' As label":
+            Align: =Align.Center
+            AutoHeight: =true
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Bold
+            Height: =25
+            Size: =11
+            Text: |-
+                ="community
+                service"
+            Width: =72
+            Y: =3
+            ZIndex: =10
+
+    "'Frame 11' As groupContainer.manualLayoutContainer":
+        DropShadow: =DropShadow.Light
+        Height: =28
+        LayoutMode: ="manual"
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =72
+        X: =184
+        Y: =126
+        ZIndex: =11
+
+        food As label:
+            Align: =Align.Center
+            AutoHeight: =true
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Bold
+            Height: =28
+            Size: =11
+            Text: ="food"
+            Width: =72
+            ZIndex: =12
+
+    "'Frame 12' As groupContainer.manualLayoutContainer":
+        DropShadow: =DropShadow.Light
+        Height: =28
+        LayoutMode: ="manual"
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =72
+        X: =330
+        Y: =126
+        ZIndex: =13
+
+        activities As label:
+            Align: =Align.Center
+            AutoHeight: =true
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Bold
+            Height: =22
+            Size: =11
+            Text: |-
+                ="Activities
+                "
+            Width: =72
+            Y: =6
+            ZIndex: =14
+
+    Icon1_2 As icon.Reset:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =0
+        Height: =25
+        Icon: =Icon.Reset
+        Width: =25
+        X: =11
+        Y: =43
+        ZIndex: =14
+

@@ -1,0 +1,95 @@
+Bio As screen:
+    Fill: =Color.White
+    Height: =956
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+    Width: =440
+
+    "'Edit Bio' As label":
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Bold
+        Height: =35
+        Size: =21
+        Text: ="Edit Bio"
+        Width: =169
+        X: =253
+        Y: =51
+        ZIndex: =2
+
+    Arrow1 As arrow.backArrow:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =100
+        OnSelect: =Navigate(user)
+        Width: =100
+        X: =22
+        Y: =21
+        ZIndex: =7
+
+    Button9_4 As button:
+        BorderColor: =App.Theme.Colors.Primary
+        Color: =App.Theme.Colors.PrimaryForeground
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 42, 74, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =App.Theme.Colors.PrimaryForeground
+        HoverFill: =App.Theme.Colors.Darker10
+        OnSelect: |-
+            =If(
+                !IsBlank(
+                    LookUp(
+                        'Database',
+                        Username = new_job_2.Text 
+                    )
+                ),
+                Notify("Your datails has been update", NotificationType.Success);
+                Navigate(user, ScreenTransition.Fade),
+                Notify("Incorrect username or password", NotificationType.Error)
+            )
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        RadiusBottomLeft: =60
+        RadiusBottomRight: =60
+        RadiusTopLeft: =60
+        RadiusTopRight: =60
+        Size: =24
+        Text: ="Confirm"
+        Width: =341
+        X: =57
+        Y: =681
+        ZIndex: =8
+
+    new_job_2 As text:
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Height: =316
+        HintText: |-
+            ="Enter your bio :"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        RadiusBottomLeft: =60
+        RadiusBottomRight: =60
+        RadiusTopLeft: =60
+        RadiusTopRight: =60
+        Size: =21
+        Width: =440
+        Y: =164
+        ZIndex: =9
+

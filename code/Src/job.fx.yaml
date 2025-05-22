@@ -1,0 +1,85 @@
+job As screen:
+    Fill: =Color.White
+    Height: =956
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+    Width: =440
+
+    "'Edit Job' As label":
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Bold
+        Height: =39
+        Size: =21
+        Text: ="Edit Job"
+        Width: =128
+        X: =155
+        Y: =36
+        ZIndex: =2
+
+    Arrow1_3 As arrow.backArrow:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =70
+        OnSelect: =Navigate(EDIT)
+        Width: =75
+        X: =15
+        Y: =21
+        ZIndex: =12
+
+    Button9_1 As button:
+        BorderColor: =App.Theme.Colors.Primary
+        Color: =App.Theme.Colors.PrimaryForeground
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 0, 0, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =App.Theme.Colors.PrimaryForeground
+        HoverFill: =App.Theme.Colors.Darker10
+        OnSelect: =Navigate(EDIT)
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        RadiusBottomLeft: =60
+        RadiusBottomRight: =60
+        RadiusTopLeft: =60
+        RadiusTopRight: =60
+        Size: =24
+        Text: ="Confirm"
+        Width: =303
+        X: =68
+        Y: =697
+        ZIndex: =13
+
+    new_job As text:
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Height: =70
+        HintText: |-
+            ="Enter job :"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =30
+        RadiusTopRight: =30
+        Size: =21
+        Width: =418
+        X: =10
+        Y: =181
+        ZIndex: =15
+

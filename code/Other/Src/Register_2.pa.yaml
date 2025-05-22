@@ -1,0 +1,165 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Register_2:
+    Properties:
+      Fill: =RGBA(230, 230, 230, 1)
+    Children:
+      - Image4_1:
+          Control: Image@2.2.3
+          Properties:
+            Height: =1136
+            Image: ='1435-jpg-1200-1200-false'
+            ImagePosition: =ImagePosition.Fill
+            Transparency: =70%
+            Width: =640
+      - Label2_1:
+          Control: Label@2.5.1
+          Properties:
+            Font: =Font.'Patrick Hand'
+            FontWeight: =FontWeight.Bold
+            Height: =91
+            Size: =60
+            Text: ="NEIGHBORLY"
+            Width: =375
+            X: =132
+            Y: =151
+      - TextInput_username:
+          Control: Classic/TextInput@2.3.2
+          Properties:
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Default: =
+            Font: =Font.'Patrick Hand'
+            Size: =29
+            X: =45
+            Y: =416
+      - Register:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.Dashed
+            Fill: =RGBA(0, 0, 0, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Open Sans Condensed'
+            Height: =67
+            OnSelect: |-
+              =If(
+                  IsBlank(TextInput_username.Text) || IsBlank(TextInput_password.Text) || IsBlank(TextInput_passwordAgain.Text),
+                  Notify("Please fill in all the fields.", NotificationType.Warning),
+
+                  TextInput_password.Text <> TextInput_passwordAgain.Text,
+                  Notify("The password entered twice is inconsistent.", NotificationType.Error),
+
+                  Patch(
+                      Database,
+                      Defaults(Database),
+                      {
+                          Username: TextInput_username.Text,
+                          'Receiver Username': TextInput_username.Text,
+                          'Password (Password0)': TextInput_password.Text
+                      }
+                  );
+                  Reset(TextInput_username);
+                  Reset(TextInput_password);
+                  Reset(TextInput_passwordAgain);
+                  Navigate(mainpage_1, ScreenTransition.Fade);
+                  Notify("Registration successful!", NotificationType.Success)
+              )
+            RadiusBottomLeft: =60
+            RadiusBottomRight: =60
+            RadiusTopLeft: =60
+            RadiusTopRight: =60
+            Size: =30
+            Text: ="Register"
+            Width: =460
+            X: =90
+            Y: =905
+      - Label6:
+          Control: Label@2.5.1
+          Properties:
+            Font: =Font.'Open Sans'
+            Height: =60
+            Size: =16
+            Text: ="Name"
+            Width: =93
+            X: =45
+            Y: =359
+      - Rectangle2_3:
+          Control: Rectangle@2.3.0
+          Properties:
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =74
+            Width: =560
+            X: =45
+            Y: =547
+      - TextInput_password:
+          Control: Classic/TextInput@2.3.2
+          Properties:
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Default: =
+            Font: =Font.'Patrick Hand'
+            Height: =76
+            Mode: =TextMode.Password
+            Size: =29
+            X: =45
+            Y: =545
+      - Label6_1:
+          Control: Label@2.5.1
+          Properties:
+            Font: =Font.'Open Sans'
+            Height: =57
+            Size: =16
+            Text: ="Password"
+            Width: =108
+            X: =45
+            Y: =490
+      - Rectangle2_4:
+          Control: Rectangle@2.3.0
+          Properties:
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =74
+            Width: =560
+            X: =45
+            Y: =674
+      - TextInput_passwordAgain:
+          Control: Classic/TextInput@2.3.2
+          Properties:
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Default: |+
+              =
+
+            Font: =Font.'Patrick Hand'
+            Height: =74
+            Mode: =TextMode.Password
+            Size: =29
+            X: =45
+            Y: =674
+      - Label6_2:
+          Control: Label@2.5.1
+          Properties:
+            Font: =Font.'Open Sans'
+            Height: =57
+            Size: =16
+            Text: ="Password again"
+            Width: =193
+            X: =45
+            Y: =617
+      - Arrow1_10:
+          Control: Arrow@2.3.0
+          Variant: BackArrow
+          Properties:
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =80
+            OnSelect: =Navigate('First page')
+            Width: =80
+            X: =22
+            Y: =21

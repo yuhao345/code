@@ -1,0 +1,27 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |+
+        =ClearCollect(colNotes, [{ Date: Today(), Note: "" }]);
+        
+        
+        ClearCollect(
+            NoteCollection,
+            [
+                {
+                    Date: Now(),
+                    Note: ""
+                }
+            ]
+        );
+        
+        
+    StartScreen: =
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

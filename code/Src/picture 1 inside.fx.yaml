@@ -1,0 +1,352 @@
+"'picture 1 inside' As screen":
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+    OnVisible: |-
+        =UpdateContext({
+            _currentCommentText: "",        
+            showMentionSuggestions: false,
+            mentionFilterTerm: ""       
+        });UpdateContext({ showCommentPopup: false }); 
+        ClearCollect(colComments, {});
+        UpdateContext({
+            _currentCommentTextToEdit: "",
+            showMentionSuggestionsPopup: false,  
+            mentionSearchFilter: ""             
+        });
+
+    Icon9 As icon.ChevronLeft:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =50
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Navigate(mainpage_1)
+        Width: =50
+        X: =21
+        Y: =66
+        ZIndex: =1
+
+    Image3 As image:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =434
+        Image: ='965307846'
+        ImagePosition: =ImagePosition.Fill
+        Width: =640
+        Y: =136
+        ZIndex: =2
+
+    Label10 As label:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        Height: =60
+        Size: =21
+        Text: |-
+            ="Handsome guys
+            "
+        Width: =214
+        X: =130
+        Y: =61
+        ZIndex: =3
+
+    Circle2 As circle:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(204, 204, 204, 1)
+        Height: =50
+        Width: =50
+        X: =75
+        Y: =66
+        ZIndex: =4
+
+    Label11 As label:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =84
+        Size: =21
+        Text: |-
+            ="This is a cute koala!
+            Do you like it? : )"
+        Width: =560
+        Y: =647
+        ZIndex: =5
+
+    Label12 As label:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =38
+        Text: ="Koala"
+        Width: =560
+        Y: =591
+        ZIndex: =6
+
+    Rectangle6 As rectangle:
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =RGBA(230, 230, 230, 1)
+        Height: =64
+        Width: =640
+        Y: =1072
+        ZIndex: =7
+
+    Icon10 As icon.Heart:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =50
+        Icon: =Icon.Heart
+        Width: =50
+        X: =379
+        Y: =1079
+        ZIndex: =8
+
+    BtnShowCommentPopup As button:
+        BorderColor: =App.Theme.Colors.Primary
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(204, 204, 204, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Semibold
+        Height: =64
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =App.Theme.Colors.PrimaryForeground
+        HoverFill: =App.Theme.Colors.Darker10
+        OnSelect: |-
+            =UpdateContext({ showCommentPopup: true })
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        Size: =24
+        Text: ="comment"
+        Width: =276
+        Y: =981
+        ZIndex: =9
+
+    Star2 As star:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =3
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =50
+        Width: =50
+        X: =532
+        Y: =1079
+        ZIndex: =10
+
+    "GalCommentsDisplay As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderColor: =App.Theme.Colors.Darker40
+        DelayItemLoading: =true
+        Height: =215
+        Items: =colComments
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =94
+        Y: =748
+        ZIndex: =11
+
+        NextArrow3 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(166, 166, 166, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =50
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Tooltip: ="查看项详细信息"
+            Width: =50
+            X: =Parent.TemplateWidth - Self.Width - 12
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator4 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        Rectangle7 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
+            Fill: =App.Theme.Colors.Darker30
+            Height: =Parent.TemplateHeight - Separator4.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =6
+
+        LblCommentTextInGallery As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            Height: =50
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =_currentCommentText
+            Width: =386
+            X: =127
+            Y: =21
+            ZIndex: =7
+
+        IconDeleteComment As icon.Erase:
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =40
+            Icon: =Icon.Erase
+            OnSelect: =Remove(colComments, ThisItem)
+            Width: =40
+            X: =550
+            Y: =26
+            ZIndex: =8
+
+        LblDisplayNameInGallery As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Bold
+            Height: =63
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.CommentAuthor
+            Width: =148
+            X: =4
+            Y: =14
+            ZIndex: =9
+
+    ContainerCommentPopup As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(230, 230, 230, 1)
+        Height: =352
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: =showCommentPopup
+        Width: =640
+        Y: =500
+        ZIndex: =12
+
+        BtnSubmitComment As button:
+            BorderColor: =App.Theme.Colors.Primary
+            Color: =App.Theme.Colors.PrimaryForeground
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =App.Theme.Colors.Primary
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =App.Theme.Colors.PrimaryForeground
+            HoverFill: =App.Theme.Colors.Darker10
+            OnSelect: |-
+                =Collect(colComments,
+                    {
+                        CommentID: CountRows(colComments) + 1,
+                        CommentText: _currentCommentText, 
+                        CommentAuthor: If(IsBlank(Trim(TxtNicknameInput.Text)), User().FullName, Trim(TxtNicknameInput.Text)),
+                        CommentTimestamp: Now()
+                    }
+                );
+                
+                UpdateContext({ _currentCommentText: "" }); 
+                Reset(TxtNicknameInput);  
+                UpdateContext({ showCommentPopup: false }); 
+                Notify("submitted!", NotificationType.Success, 2000); 
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
+            PressedFill: =App.Theme.Colors.Darker40
+            Size: =24
+            Text: |-
+                ="submit
+                "
+            Width: =280
+            X: =360
+            Y: =282
+            ZIndex: =1
+
+        TxtCommentInput As text:
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
+            Default: =_currentCommentTextToEdit
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Font: =App.Theme.Font
+            Height: =230
+            HintText: ="write your comment here"
+            HoverBorderColor: =App.Theme.Colors.Darker40
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =App.Theme.Colors.Lighter70
+            Mode: =TextMode.MultiLine
+            OnChange: |
+                =UpdateContext({ _currentCommentText: Self.Text });
+            Size: =21
+            Width: =640
+            Y: =51
+            ZIndex: =2
+
+        Label14 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            Height: =51
+            Size: =21
+            Text: ="Write your comments"
+            Width: =536
+            ZIndex: =3
+
+        IconCloseCommentPopup As icon.Cancel:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =App.Theme.Colors.Darker30
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =40
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =UpdateContext({ showCommentPopup: false })
+            Width: =40
+            X: =584
+            Y: =5
+            ZIndex: =4
+
+        TxtNicknameInput As text:
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
+            Default: =User().FullName
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Font: =App.Theme.Font
+            Height: =70
+            HintText: ="enter your name"
+            HoverBorderColor: =App.Theme.Colors.Darker40
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =App.Theme.Colors.Lighter70
+            Size: =21
+            Width: =360
+            Y: =282
+            ZIndex: =5
+

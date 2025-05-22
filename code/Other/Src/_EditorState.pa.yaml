@@ -1,0 +1,40 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+EditorState:
+  ScreensOrder:
+    - about
+    - language
+    - accountsecurity
+    - setting
+    - EDIT
+    - Gender
+    - birthdate
+    - job
+    - Bio
+    - location
+    - community ID
+    - Editname
+    - searchpage
+    - mainpage
+    - mainpage_1
+    - loginpage
+    - Register_2
+    - xiangxi
+    - First page
+    - notification
+    - picture 1 inside
+    - user
+    - mainpage_2
+    - mainpage_3
+    - mainpage_4
+    - calendar
+    - calendar_1
+    - calendar_2
+  ComponentDefinitionsOrder:
+    - Component1

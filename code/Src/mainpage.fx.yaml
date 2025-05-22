@@ -1,0 +1,478 @@
+mainpage As screen:
+    BackgroundImage: =
+    Fill: |-
+        =RGBA(
+            255,
+            255,
+            255,
+            1
+        )
+    Height: =956
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+    Width: =440
+
+    nearby As label:
+        Align: =Align.Center
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        Height: =35
+        Size: =21
+        Text: ="nearby"
+        Width: =95
+        X: =16
+        Y: =77
+        ZIndex: =4
+
+    Activities As label:
+        Align: =Align.Center
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        Height: =34
+        Size: =21
+        Text: |-
+            ="Activities
+            "
+        X: =290
+        Y: =77
+        ZIndex: =5
+
+    news As label:
+        Align: =Align.Center
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        Height: =35
+        Size: =21
+        Text: ="news"
+        Width: =100
+        X: =157
+        Y: =77
+        ZIndex: =6
+
+    "'main content' As groupContainer.manualLayoutContainer":
+        DropShadow: =DropShadow.Light
+        Height: =844
+        LayoutMode: ="manual"
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =451
+        Y: =112
+        ZIndex: =7
+
+        "'Frame 2' As groupContainer.manualLayoutContainer":
+            DropShadow: =DropShadow.Light
+            Height: =344
+            LayoutMode: ="manual"
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =215
+            Y: =10
+            ZIndex: =8
+
+            "'image 1_1' As image":
+                BorderColor: =App.Theme.Colors.Darker40
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =384
+                Image: =image569
+                Width: =215.1693115234375
+                ZIndex: =9
+
+            "'7ba86caef8fe16e9d806795aeb78296 1' As image":
+                BorderColor: =App.Theme.Colors.Darker40
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =344
+                Image: =image9464
+                Width: =210.38314819335938
+                X: =5
+                ZIndex: =10
+
+        "'Frame 2_1' As groupContainer.manualLayoutContainer":
+            DropShadow: =DropShadow.Light
+            Height: =351
+            LayoutMode: ="manual"
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =215
+            X: =215
+            ZIndex: =11
+
+            "'image 1_2' As image":
+                BorderColor: =App.Theme.Colors.Darker40
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =384
+                Image: =image560
+                Width: =215.1693115234375
+                ZIndex: =12
+
+            "'0399c8a4b40ccd0b74f2bd6bdda04f5 1' As image":
+                BorderColor: =App.Theme.Colors.Darker40
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =344
+                Image: =image9467
+                Width: =210
+                X: =3
+                Y: =7
+                ZIndex: =13
+
+        "'Frame 2_2' As groupContainer.manualLayoutContainer":
+            DropShadow: =DropShadow.Light
+            Height: =344
+            LayoutMode: ="manual"
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =210
+            X: =3
+            Y: =350
+            ZIndex: =14
+
+            "'image 1_3' As image":
+                BorderColor: =App.Theme.Colors.Darker40
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =384
+                Image: =image563
+                Width: =215.1693115234375
+                ZIndex: =15
+
+            "'fbad9db871fc35cab95a510e14752a3 1' As image":
+                BorderColor: =App.Theme.Colors.Darker40
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =344
+                Image: =image9469
+                Width: =215
+                ZIndex: =16
+
+        "'Frame 11_1' As groupContainer.manualLayoutContainer":
+            DropShadow: =DropShadow.Light
+            Height: =344
+            LayoutMode: ="manual"
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =215
+            Y: =1384
+            ZIndex: =17
+
+            "'image 1_4' As image":
+                BorderColor: =App.Theme.Colors.Darker40
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =384
+                Image: =image595
+                Width: =215.1693115234375
+                ZIndex: =18
+
+        "'Frame 10_1' As groupContainer.manualLayoutContainer":
+            DropShadow: =DropShadow.Light
+            Height: =344
+            LayoutMode: ="manual"
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =215
+            X: =213
+            Y: =1044
+            ZIndex: =19
+
+            "'image 1_5' As image":
+                BorderColor: =App.Theme.Colors.Darker40
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =384
+                Image: =image592
+                Width: =215.1693115234375
+                ZIndex: =20
+
+        "'Frame 9_1' As groupContainer.manualLayoutContainer":
+            DropShadow: =DropShadow.Light
+            Height: =344
+            LayoutMode: ="manual"
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =215
+            X: =5
+            Y: =1040
+            ZIndex: =21
+
+            "'image 1_6' As image":
+                BorderColor: =App.Theme.Colors.Darker40
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =384
+                Image: =image589
+                Width: =215.1693115234375
+                ZIndex: =22
+
+        "'Frame 8' As groupContainer.manualLayoutContainer":
+            DropShadow: =DropShadow.Light
+            Height: =344
+            LayoutMode: ="manual"
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =215
+            X: =212
+            Y: =700
+            ZIndex: =23
+
+            "'image 1_7' As image":
+                BorderColor: =App.Theme.Colors.Darker40
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =384
+                Image: =image586
+                Width: =215.1693115234375
+                ZIndex: =24
+
+        "'Frame 7' As groupContainer.manualLayoutContainer":
+            DropShadow: =DropShadow.Light
+            Height: =344
+            LayoutMode: ="manual"
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =215
+            X: =6
+            Y: =703
+            ZIndex: =25
+
+            "'image 1_8' As image":
+                BorderColor: =App.Theme.Colors.Darker40
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =384
+                Image: =image583
+                Width: =215.1693115234375
+                ZIndex: =26
+
+            "'e4aa38ba21602cf319391959b3860d8 1' As image":
+                BorderColor: =App.Theme.Colors.Darker40
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =344
+                Image: =image94857
+                Width: =210
+                ZIndex: =27
+
+        "'Frame 6_1' As groupContainer.manualLayoutContainer":
+            DropShadow: =DropShadow.Light
+            Height: =345.8759460449219
+            LayoutMode: ="manual"
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =218.01446533203125
+            X: =212
+            Y: =354
+            ZIndex: =28
+
+            "'image 1_9' As image":
+                BorderColor: =App.Theme.Colors.Darker40
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =385.8758850097656
+                Image: =image566
+                Width: =218.53526306152344
+                ZIndex: =29
+
+        "'Frame 12_1' As groupContainer.manualLayoutContainer":
+            DropShadow: =DropShadow.Light
+            Height: =344
+            LayoutMode: ="manual"
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =215
+            X: =215
+            Y: =1386
+            ZIndex: =30
+
+            "'image 1_10' As image":
+                BorderColor: =App.Theme.Colors.Darker40
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =384
+                Image: =image598
+                Width: =215.1693115234375
+                ZIndex: =31
+
+        "'Frame 2_3' As groupContainer.manualLayoutContainer":
+            DropShadow: =DropShadow.Light
+            Height: =344
+            LayoutMode: ="manual"
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =215
+            X: =5
+            Y: =1731
+            ZIndex: =32
+
+            "'image 1_11' As image":
+                BorderColor: =App.Theme.Colors.Darker40
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =384
+                Image: =image5101
+                Width: =215.1693115234375
+                ZIndex: =33
+
+        "'Frame 2_4' As groupContainer.manualLayoutContainer":
+            DropShadow: =DropShadow.Light
+            Height: =344
+            LayoutMode: ="manual"
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =215
+            X: =220
+            Y: =1731
+            ZIndex: =34
+
+            "'image 1_12' As image":
+                BorderColor: =App.Theme.Colors.Darker40
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =384
+                Image: =image5104
+                Width: =215.1693115234375
+                ZIndex: =35
+
+        "'548bb247b2b0ee9b0a246d746b58097 1' As image":
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =344
+            Image: =image94643
+            Width: =215
+            X: =213
+            Y: =355
+            ZIndex: =36
+
+        "'d6d4fe63158109a2b1e54712cfa8e2a 1' As image":
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =361
+            Image: =image941055
+            Width: =210
+            X: =218
+            Y: =704
+            ZIndex: =37
+
+    "'basic user page_2' As groupContainer.manualLayoutContainer":
+        BorderStyle: =BorderStyle.None
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =84
+        LayoutMode: ="manual"
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =440
+        Y: =880
+        ZIndex: =38
+
+        Icon4 As icon.Home:
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderStyle: =BorderStyle.Dashed
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =0
+            Height: =50
+            Icon: =Icon.Home
+            OnSelect: =Navigate(mainpage)
+            Width: =50
+            X: =53
+            Y: =18
+            ZIndex: =41
+
+        Icon5 As icon.Add:
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =50
+            Icon: =Icon.Add
+            Width: =50
+            X: =192
+            Y: =18
+            ZIndex: =42
+
+        Icon7 As icon.Person:
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =50
+            Icon: =Icon.Person
+            OnSelect: =Navigate(user)
+            Width: =50
+            X: =330
+            Y: =18
+            ZIndex: =43
+
+    "'Frame 9_2' As groupContainer.manualLayoutContainer":
+        BorderStyle: =BorderStyle.Dashed
+        BorderThickness: =1
+        DropShadow: =DropShadow.Light
+        Height: =43
+        LayoutMode: ="manual"
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =326
+        X: =57
+        Y: =34
+        ZIndex: =39
+
+        Icon2_1 As icon.Search:
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =25
+            Icon: =Icon.Search
+            Width: =25
+            X: =285
+            Y: =10
+            ZIndex: =5
+
+        Icon3_1 As icon.Camera:
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =25
+            Icon: =Icon.Camera
+            Width: =25
+            X: =14
+            Y: =10
+            ZIndex: =6
+

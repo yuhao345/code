@@ -1,0 +1,69 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Bio:
+    Properties:
+      Height: =956
+      Width: =440
+    Children:
+      - Edit Bio:
+          Control: Label@2.5.1
+          Properties:
+            FontWeight: =FontWeight.Bold
+            Height: =35
+            Text: ="Edit Bio"
+            Width: =169
+            X: =253
+            Y: =51
+      - Arrow1:
+          Control: Arrow@2.3.0
+          Variant: BackArrow
+          Properties:
+            Fill: =RGBA(0, 0, 0, 1)
+            OnSelect: =Navigate(user)
+            X: =22
+            Y: =21
+      - Button9_4:
+          Control: Classic/Button@2.2.0
+          Properties:
+            Fill: =RGBA(0, 42, 74, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            OnSelect: |-
+              =If(
+                  !IsBlank(
+                      LookUp(
+                          'Database',
+                          Username = new_job_2.Text 
+                      )
+                  ),
+                  Notify("Your datails has been update", NotificationType.Success);
+                  Navigate(user, ScreenTransition.Fade),
+                  Notify("Incorrect username or password", NotificationType.Error)
+              )
+            RadiusBottomLeft: =60
+            RadiusBottomRight: =60
+            RadiusTopLeft: =60
+            RadiusTopRight: =60
+            Text: ="Confirm"
+            Width: =341
+            X: =57
+            Y: =681
+      - new_job_2:
+          Control: Classic/TextInput@2.3.2
+          Properties:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Default: =
+            Height: =316
+            HintText: ="Enter your bio :"
+            RadiusBottomLeft: =60
+            RadiusBottomRight: =60
+            RadiusTopLeft: =60
+            RadiusTopRight: =60
+            Width: =440
+            Y: =164

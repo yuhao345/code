@@ -1,0 +1,167 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  user:
+    Children:
+      - Canvas10:
+          Control: FluidGrid@2.3.0
+          Properties:
+            AcceptsFocus: =true
+            BorderThickness: =0
+            Height: =1600
+            Width: =Parent.Width
+            Y: =RectQuickActionBar11.Y + RectQuickActionBar11.Height
+          Children:
+            - DataCard17:
+                Control: DataCard@1.0.2
+                Properties:
+                  Height: =1052
+                  Width: =Parent.Width
+                  X: =0
+                  Y: =0
+                Children:
+                  - Container3:
+                      Control: GroupContainer@1.3.0
+                      Variant: ManualLayout
+                      Properties:
+                        Height: =122
+                        Width: =118
+                        X: =40
+                        Y: =40
+                      Children:
+                        - Avatar1:
+                            Control: Avatar@1.0.40
+                            Properties:
+                              Height: =121
+                              Width: =114
+                              X: =4
+                              Y: =1
+                  - TextCanvas7:
+                      Control: Text@0.0.51
+                      Properties:
+                        Height: =58
+                        Size: =40
+                        Text: ="Name"
+                        Width: =140
+                        X: =179
+                        Y: =40
+                  - TextCanvas8:
+                      Control: Text@0.0.51
+                      Properties:
+                        Size: =20
+                        Text: ="ID:XXXXXX"
+                        X: =179
+                        Y: =118
+                  - ButtonCanvas9:
+                      Control: Button@0.0.45
+                      Properties:
+                        BorderColor: =RGBA(13, 50, 61, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        BorderThickness: =2
+                        Icon: ="Edit"
+                        OnSelect: =Navigate(Bio)
+                        Text: ="Click here to fill in the profile"
+                        Width: =259
+                        X: =40
+                        Y: =194
+      - Container1:
+          Control: GroupContainer@1.3.0
+          Variant: ManualLayout
+          Properties:
+            BorderStyle: =BorderStyle.None
+            Height: =1000
+            Width: =640
+            Y: =320
+          Children:
+            - Container2:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  Height: =390
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  Width: =315
+                  X: =314
+                  Y: =4
+            - Container2_1:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  Height: =390
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  Width: =315
+                  Y: =4
+            - Container2_2:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  Height: =390
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  Width: =315
+                  Y: =394
+            - Container2_3:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  Height: =390
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  Width: =315
+                  X: =320
+                  Y: =394
+            - basic user page:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  BorderStyle: =BorderStyle.None
+                  Fill: =RGBA(255, 255, 255, 1)
+                  Height: =82
+                  Width: =640
+                  Y: =730
+                Children:
+                  - Icon4_2:
+                      Control: Classic/Icon@2.5.0
+                      Properties:
+                        BorderColor: =RGBA(255, 255, 255, 1)
+                        BorderStyle: =BorderStyle.Dashed
+                        Color: =RGBA(0, 0, 0, 1)
+                        FocusedBorderThickness: =0
+                        Height: =50
+                        Icon: =Icon.Home
+                        OnSelect: =Navigate(mainpage)
+                        Width: =50
+                        X: =53
+                        Y: =18
+                  - Icon5_2:
+                      Control: Classic/Icon@2.5.0
+                      Properties:
+                        Color: =RGBA(0, 0, 0, 1)
+                        Height: =50
+                        Icon: =Icon.Add
+                        Width: =50
+                        X: =291
+                        Y: =18
+                  - Icon7_2:
+                      Control: Classic/Icon@2.5.0
+                      Properties:
+                        Color: =RGBA(0, 0, 0, 1)
+                        Height: =50
+                        Icon: =Icon.Person
+                        OnSelect: =Navigate(user)
+                        Width: =50
+                        X: =506
+                        Y: =18
+      - ButtonCanvas8:
+          Control: Button@0.0.45
+          Properties:
+            FontSize: =17
+            Height: =50
+            OnSelect: =Navigate(EDIT, ScreenTransition.Fade)
+            Text: ="Edit profile"
+            Width: =120
+            X: =452
+            Y: =186

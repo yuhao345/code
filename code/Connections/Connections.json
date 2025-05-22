@@ -1,0 +1,43 @@
+{
+  "d284ac51-83a4-4e12-b182-b68bafa764e3": {
+    "connectionRef": {
+      "displayName": "Office 365 Outlook",
+      "iconUri": "https://conn-afd-prod-endpoint-bmc9bqahasf3grgk.b01.azurefd.net/releases/v1.0.1747/1.0.1748.4181/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365"
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Outlook"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "d284ac51-83a4-4e12-b182-b68bafa764e3"
+  },
+  "fb337d7c-ae21-4760-b4e7-ab9fded64c34": {
+    "appActions": [],
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://conn-afd-prod-endpoint-bmc9bqahasf3grgk.b01.azurefd.net/releases/v1.0.1746/1.0.1746.4174/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://unisydneyedu.sharepoint.com/sites/Project22": {
+        "dataSources": {
+          "Database": {
+            "tableName": "1555296d-b060-4808-8a4a-0f1e0b083522"
+          },
+          "Database_1": {
+            "tableName": "1555296d-b060-4808-8a4a-0f1e0b083522"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Database",
+      "Database_1"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "fb337d7c-ae21-4760-b4e7-ab9fded64c34"
+  }
+}

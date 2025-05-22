@@ -1,0 +1,51 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2025-04-21T17:58:59.6220000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "{Attachments}": "附件",
+      "{Attachments}@odata.type": "{Attachments} ({Attachments}@odata.type)",
+      "{ContentType}": "内容类型",
+      "{ContentType}#Id": "内容类型 Id",
+      "{FilenameWithExtension}": "文件名(带扩展名)",
+      "{FullPath}": "完整路径",
+      "{HasAttachments}": "带附件",
+      "{Identifier}": "标识符",
+      "{IsFolder}": "为文件夹",
+      "{Link}": "项目链接",
+      "{ModerationComment}": "与此列表项的内容审批相关联的注释",
+      "{ModerationStatus}": "内容审批状态",
+      "{Name}": "名称",
+      "{Path}": "文件夹路径",
+      "{Thumbnail}": "Thumbnail",
+      "{TriggerWindowEndToken}": "触发窗口结束令牌",
+      "{TriggerWindowStartToken}": "触发窗口开始令牌",
+      "{VersionNumber}": "版本号",
+      "Author": "创建者",
+      "Author#Claims": "创建者 Claims",
+      "ComplianceAssetId": "合规性资产 ID",
+      "Created": "创建时间",
+      "Editor": "修改者",
+      "Editor#Claims": "修改者 Claims",
+      "Emailaddress": "Sender email address",
+      "ID": "ID",
+      "Modified": "修改时间",
+      "OData__ColorTag": "颜色标记",
+      "Password": "Username",
+      "Password0": "Password (Password0)",
+      "Receiveremailaddress": "Receiver email address",
+      "ReceiverUsername": "Receiver Username",
+      "Title": "标题"
+    },
+    "DatasetName": "https://unisydneyedu.sharepoint.com/sites/Project22",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "Database",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

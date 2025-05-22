@@ -1,0 +1,452 @@
+notification As screen:
+    Fill: =Color.White
+    Height: =956
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+    Width: =440
+
+    "'Receive message notification' As label":
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Bold
+        Height: =28
+        Size: =15
+        Text: ="Receive message notification"
+        Width: =429
+        X: =11
+        Y: =92
+        ZIndex: =1
+
+    "'engagement notification' As label":
+        AutoHeight: =true
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Bold
+        Height: =24
+        Size: =15
+        Text: ="Engagement notification"
+        Width: =303
+        X: =11
+        Y: =134
+        ZIndex: =2
+
+    "'Likes&Collects' As label":
+        AutoHeight: =true
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Bold
+        Height: =24
+        Size: =15
+        Text: ="Likes&Collects"
+        X: =10
+        Y: =184
+        ZIndex: =3
+
+    "'New followers' As label":
+        AutoHeight: =true
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Bold
+        Height: =24
+        Size: =15
+        Text: ="New followers"
+        Width: =253
+        X: =13
+        Y: =244
+        ZIndex: =5
+
+    Comments As label:
+        AutoHeight: =true
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Bold
+        Height: =24
+        Size: =15
+        Text: ="Comments"
+        Width: =159
+        X: =12
+        Y: =300
+        ZIndex: =7
+
+    "'@' As label":
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Bold
+        Height: =24
+        Size: =15
+        Text: ="@"
+        Width: =25
+        X: =13
+        Y: =356
+        ZIndex: =9
+
+    "'Chat notification' As label":
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Bold
+        Height: =24
+        Size: =15
+        Text: ="Chat notification"
+        Width: =228
+        X: =14
+        Y: =416
+        ZIndex: =11
+
+    Chat As label:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Bold
+        Height: =24
+        Size: =15
+        Text: ="Chat"
+        Width: =106
+        X: =16
+        Y: =472
+        ZIndex: =12
+
+    "'content notifications' As label":
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Bold
+        Height: =24
+        Size: =15
+        Text: ="content notifications"
+        Width: =239
+        X: =14
+        Y: =546
+        ZIndex: =15
+
+    "'Follow the author for updates' As label":
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Bold
+        Height: =24
+        Size: =15
+        Text: ="Follow the author for updates "
+        Width: =292
+        X: =11
+        Y: =609
+        ZIndex: =16
+
+    "'Live reminders' As label":
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Bold
+        Height: =24
+        Size: =15
+        Text: ="Live reminders"
+        Width: =149
+        X: =11
+        Y: =665
+        ZIndex: =17
+
+    "'Content recommendation' As label":
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Bold
+        Height: =24
+        Size: =15
+        Text: ="Content recommendation"
+        Width: =255
+        X: =11
+        Y: =721
+        ZIndex: =18
+
+    "'Recommend users' As label":
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Bold
+        Height: =24
+        Size: =15
+        Text: ="Recommend users"
+        Width: =187
+        X: =11
+        Y: =773
+        ZIndex: =19
+
+    "'In-apps notifications' As label":
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Bold
+        Height: =24
+        Size: =15
+        Text: ="In-apps notifications"
+        Width: =239
+        X: =14
+        Y: =844
+        ZIndex: =23
+
+    "'In-apps notifications_1' As label":
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Bold
+        Height: =24
+        Size: =15
+        Text: ="In-apps notifications"
+        Width: =252
+        X: =14
+        Y: =886
+        ZIndex: =24
+
+    Icon1_1 As icon.Reset:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =0
+        Height: =40
+        Icon: =Icon.Reset
+        OnSelect: =Navigate(setting)
+        Width: =40
+        X: =26
+        Y: =32
+        ZIndex: =28
+
+    Toggle1 As toggleSwitch:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        FalseFill: =RGBA(128, 130, 133, 1)
+        Font: =App.Theme.Font
+        HandleFill: =RGBA(255, 255, 255, 1)
+        ShowLabel: =false
+        Size: =21
+        TrueFill: =App.Theme.Colors.Primary
+        Width: =60
+        X: =368
+        Y: =92
+        ZIndex: =29
+
+    Toggle1_1 As toggleSwitch:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        FalseFill: =RGBA(128, 130, 133, 1)
+        Font: =App.Theme.Font
+        HandleFill: =RGBA(255, 255, 255, 1)
+        ShowLabel: =false
+        Size: =21
+        TrueFill: =App.Theme.Colors.Primary
+        Width: =60
+        X: =368
+        Y: =184
+        ZIndex: =30
+
+    Toggle1_2 As toggleSwitch:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        FalseFill: =RGBA(128, 130, 133, 1)
+        Font: =App.Theme.Font
+        HandleFill: =RGBA(255, 255, 255, 1)
+        ShowLabel: =false
+        Size: =21
+        TrueFill: =App.Theme.Colors.Primary
+        Width: =60
+        X: =368
+        Y: =244
+        ZIndex: =31
+
+    Toggle1_3 As toggleSwitch:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        FalseFill: =RGBA(128, 130, 133, 1)
+        Font: =App.Theme.Font
+        HandleFill: =RGBA(255, 255, 255, 1)
+        ShowLabel: =false
+        Size: =21
+        TrueFill: =App.Theme.Colors.Primary
+        Width: =60
+        X: =368
+        Y: =296
+        ZIndex: =32
+
+    Toggle1_4 As toggleSwitch:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        FalseFill: =RGBA(128, 130, 133, 1)
+        Font: =App.Theme.Font
+        HandleFill: =RGBA(255, 255, 255, 1)
+        ShowLabel: =false
+        Size: =21
+        TrueFill: =App.Theme.Colors.Primary
+        Width: =60
+        X: =368
+        Y: =349
+        ZIndex: =33
+
+    Toggle1_5 As toggleSwitch:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        FalseFill: =RGBA(128, 130, 133, 1)
+        Font: =App.Theme.Font
+        HandleFill: =RGBA(255, 255, 255, 1)
+        ShowLabel: =false
+        Size: =21
+        TrueFill: =App.Theme.Colors.Primary
+        Width: =60
+        X: =368
+        Y: =463
+        ZIndex: =34
+
+    Toggle1_6 As toggleSwitch:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        FalseFill: =RGBA(128, 130, 133, 1)
+        Font: =App.Theme.Font
+        HandleFill: =RGBA(255, 255, 255, 1)
+        ShowLabel: =false
+        Size: =21
+        TrueFill: =App.Theme.Colors.Primary
+        Width: =60
+        X: =368
+        Y: =613
+        ZIndex: =35
+
+    Toggle1_7 As toggleSwitch:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        FalseFill: =RGBA(128, 130, 133, 1)
+        Font: =App.Theme.Font
+        HandleFill: =RGBA(255, 255, 255, 1)
+        ShowLabel: =false
+        Size: =21
+        TrueFill: =App.Theme.Colors.Primary
+        Width: =60
+        X: =368
+        Y: =663
+        ZIndex: =36
+
+    Toggle1_8 As toggleSwitch:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        FalseFill: =RGBA(128, 130, 133, 1)
+        Font: =App.Theme.Font
+        HandleFill: =RGBA(255, 255, 255, 1)
+        ShowLabel: =false
+        Size: =21
+        TrueFill: =App.Theme.Colors.Primary
+        Width: =60
+        X: =368
+        Y: =716
+        ZIndex: =37
+
+    Toggle1_9 As toggleSwitch:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        FalseFill: =RGBA(128, 130, 133, 1)
+        Font: =App.Theme.Font
+        HandleFill: =RGBA(255, 255, 255, 1)
+        ShowLabel: =false
+        Size: =21
+        TrueFill: =App.Theme.Colors.Primary
+        Width: =60
+        X: =368
+        Y: =773
+        ZIndex: =38
+
+    Toggle1_10 As toggleSwitch:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        FalseFill: =RGBA(128, 130, 133, 1)
+        FalseText: ="关"
+        Font: =App.Theme.Font
+        HandleFill: =RGBA(255, 255, 255, 1)
+        ShowLabel: =false
+        Size: =21
+        TrueFill: =App.Theme.Colors.Primary
+        TrueText: ="开"
+        Width: =60
+        X: =368
+        Y: =844
+        ZIndex: =39
+
+    Toggle1_11 As toggleSwitch:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        FalseFill: =RGBA(128, 130, 133, 1)
+        FalseText: ="关"
+        Font: =App.Theme.Font
+        HandleFill: =RGBA(255, 255, 255, 1)
+        ShowLabel: =false
+        Size: =21
+        TrueFill: =App.Theme.Colors.Primary
+        TrueText: ="开"
+        Width: =60
+        X: =368
+        Y: =886
+        ZIndex: =40
+
+    Toggle1_12 As toggleSwitch:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        FalseFill: =RGBA(128, 130, 133, 1)
+        FalseText: ="关"
+        Font: =App.Theme.Font
+        HandleFill: =RGBA(255, 255, 255, 1)
+        ShowLabel: =false
+        Size: =21
+        TrueFill: =App.Theme.Colors.Primary
+        TrueText: ="开"
+        Width: =60
+        X: =368
+        Y: =546
+        ZIndex: =41
+
+    Toggle1_13 As toggleSwitch:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        FalseFill: =RGBA(128, 130, 133, 1)
+        FalseText: ="关"
+        Font: =App.Theme.Font
+        HandleFill: =RGBA(255, 255, 255, 1)
+        ShowLabel: =false
+        Size: =21
+        TrueFill: =App.Theme.Colors.Primary
+        TrueText: ="开"
+        Width: =60
+        X: =368
+        Y: =416
+        ZIndex: =42
+
+    Toggle1_14 As toggleSwitch:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        FalseFill: =RGBA(128, 130, 133, 1)
+        FalseText: ="关"
+        Font: =App.Theme.Font
+        HandleFill: =RGBA(255, 255, 255, 1)
+        ShowLabel: =false
+        Size: =21
+        TrueFill: =App.Theme.Colors.Primary
+        TrueText: ="开"
+        Width: =60
+        X: =368
+        Y: =138
+        ZIndex: =43
+

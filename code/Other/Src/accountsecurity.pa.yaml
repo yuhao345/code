@@ -1,0 +1,157 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  accountsecurity:
+    Properties:
+      Height: =956
+      Width: =440
+    Children:
+      - Mobile:
+          Control: Label@2.5.1
+          Properties:
+            Height: =39
+            Text: ="Mobile"
+            Width: =110
+            X: =26
+            Y: =116
+      - Password:
+          Control: Label@2.5.1
+          Properties:
+            Height: =39
+            Text: ="Password"
+            Width: =158
+            X: =26
+            Y: =195
+      - Email:
+          Control: Label@2.5.1
+          Properties:
+            Height: =39
+            Text: ="Email "
+            Width: =89
+            X: =26
+            Y: =274
+      - Apple ID:
+          Control: Label@2.5.1
+          Properties:
+            Height: =39
+            Text: ="Apple ID"
+            Width: =136
+            X: =26
+            Y: =353
+      - Rectangle 10:
+          Control: Rectangle@2.3.0
+          Properties:
+            Height: =47
+            Width: =216
+            X: =194
+            Y: =112
+      - Rectangle 21:
+          Control: Rectangle@2.3.0
+          Properties:
+            Height: =47
+            Width: =216
+            X: =198
+            Y: =424
+      - Rectangle 20:
+          Control: Rectangle@2.3.0
+          Properties:
+            Height: =47
+            Width: =216
+            X: =198
+            Y: =339
+      - Rectangle 19:
+          Control: Rectangle@2.3.0
+          Properties:
+            Height: =47
+            Width: =216
+            X: =194
+            Y: =262
+      - Rectangle 18:
+          Control: Rectangle@2.3.0
+          Properties:
+            Height: =47
+            Width: =216
+            X: =198
+            Y: =185
+      - xxxxx@xxxxx.com:
+          Control: Label@2.5.1
+          Properties:
+            Height: =51
+            Size: =20
+            Text: ="xxxxx@xxxxx.com"
+            Width: =242
+            X: =194
+            Y: =260
+      - xxxxxxxxxxxx:
+          Control: Label@2.5.1
+          Properties:
+            Height: =36
+            Text: ="xxxxxxxxxxxx"
+            Width: =167
+            X: =231
+            Y: =185
+      - xxxxxxxxxxx:
+          Control: Label@2.5.1
+          Properties:
+            Height: =47
+            Text: ="xxxxxxxxxxx"
+            Width: =159
+            X: =222
+            Y: =339
+      - xxxxxxxx:
+          Control: Label@2.5.1
+          Properties:
+            Height: =37
+            Text: ="xxxxxxxx"
+            Width: =180
+            X: =211
+            Y: =429
+      - Google:
+          Control: Label@2.5.1
+          Properties:
+            Height: =78
+            Text: |-
+              ="Google
+              "
+            Width: =116
+            X: =47
+            Y: =408
+      - Button15:
+          Control: Classic/Button@2.2.0
+          Properties:
+            Fill: =RGBA(0, 0, 0, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            OnSelect: =Navigate(loginpage)
+            RadiusBottomLeft: =60
+            RadiusBottomRight: =60
+            RadiusTopLeft: =60
+            RadiusTopRight: =60
+            Text: ="logout "
+            Width: =344
+            X: =70
+            Y: =676
+      - Arrow3:
+          Control: Arrow@2.3.0
+          Variant: BackArrow
+          Properties:
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =68
+            OnSelect: =Navigate(setting)
+            Width: =75
+            X: =20
+            Y: =12
+      - TextCanvas1:
+          Control: Text@0.0.51
+          Properties:
+            Height: =44
+            Size: =20
+            Text: ="(61)XXXXXXXXXX"
+            Width: =197
+            X: =203
+            Y: =116

@@ -1,0 +1,309 @@
+calendar_2 As screen:
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+    OnVisible: |
+        =
+        Set(varMonthOffset, 0);
+        
+        Set(
+            varCurrentDate,
+            Date(Year(Today()), Month(Today()) + varMonthOffset, 1)
+        );
+        
+        Set(
+            varStartDate,
+            DateAdd(
+                varCurrentDate,
+                -Weekday(varCurrentDate) + 1,
+                "Days"
+            )
+        );
+        
+        ClearCollect(
+            colCalendar,
+            ForAll(
+                Sequence(42),
+                {
+                    MyDate: DateAdd(varStartDate, ThisRecord.Value - 1, "Days")
+                }
+            )
+        );
+        ClearCollect(colNotes, []);
+        Set(varShowNotePopup, false);
+        Set(varSelectedDate, Blank());
+
+    "Gallery5_2 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+        BorderColor: =App.Theme.Colors.Darker40
+        DelayItemLoading: =true
+        Height: =95
+        Items: =Calendar.WeekdaysShort()
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =80
+        WrapCount: =7
+        Y: =40
+        ZIndex: =1
+
+        Title5_2 As label:
+            Align: =Align.Center
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =32
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =19
+            Text: =ThisItem.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =65
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Separator6_2 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =2
+
+    Container4_2 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =225
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: |
+            =showAddPopup
+        X: =60
+        Y: =60
+        ZIndex: =2
+
+        txtNewContent_2 As text:
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
+            Default: =""""""
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Font: =App.Theme.Font
+            Height: =153
+            HintText: ="""Enter your note here"""
+            HoverBorderColor: =App.Theme.Colors.Darker40
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =App.Theme.Colors.Lighter70
+            Size: =21
+            X: =40
+            Y: =72
+            ZIndex: =4
+
+        dpNewDate_2 As 日期选取器:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Width: =320
+            X: =40
+            Y: =40
+            ZIndex: =5
+
+        save1_1 As 按钮:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            OnSelect: |
+                =Collect(
+                    NoteCollection,
+                    {
+                        Date: If(IsBlank(dpNewDate_2.SelectedDate), Now(), dpNewDate_2.SelectedDate),
+                        Note: If(IsBlank(txtNewContent_2.Text), "", txtNewContent_2.Text)
+                    }
+                );
+                UpdateContext({ showAddPopup: false });
+                Reset(dpNewDate_2);
+                Reset(txtNewContent_2);
+            Text: ="save"
+            Width: =96
+            X: =387
+            Y: =168
+            ZIndex: =6
+
+    "Gallery2_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderColor: =App.Theme.Colors.Darker40
+        DelayItemLoading: =true
+        Height: =836
+        Items: =colCalendar
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: |
+            =Set(selectedDate, ThisItem.MyDate)
+        TemplatePadding: =4
+        TemplateSize: =130
+        WrapCount: =7
+        Y: =90
+        ZIndex: =3
+
+        Label7_2 As label:
+            Align: =Align.Center
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: |
+                =If(ThisItem.MyDate = Today(), Color.White, If(ThisItem.MyDate < Today(), Color.Gray, Color.Black))
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Fill: |
+                =If(ThisItem.MyDate = Today(), Color.LightBlue, Color.Transparent)
+            Font: =App.Theme.Font
+            Height: =104
+            OnSelect: |+
+                =Set(varSelectedDate, ThisItem.MyDate);
+                Set(varShowNotePopup, true);
+                Set(selectedDate, ThisItem.MyDate)
+                
+            Size: =21
+            Text: =ThisItem.MyDate
+            Width: =86.85714285714286
+            Y: =26
+            ZIndex: =7
+
+        Title1_2 As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.MyDate
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 173
+            X: =86.85714285714286
+            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle1_2.Size * 1.8)) / 2
+            ZIndex: =8
+
+        Subtitle1_2 As label:
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.MyDate
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title1_2.Width
+            X: =86.85714285714286
+            Y: =Title1_2.Y + Title1_2.Height
+            ZIndex: =9
+
+    ButtonCanvas4_2 As 按钮:
+        DisplayMode: =DisplayMode.Edit
+        Height: =50
+        Icon: ="ArrowLeft"
+        OnSelect: |
+            =Set(varMonthOffset, varMonthOffset - 1);
+            Set(varCurrentDate, Date(Year(Today()), Month(Today()) + varMonthOffset, 1));
+            Set(varStartDate, DateAdd(varCurrentDate, -Weekday(varCurrentDate) + 1, "Days"));
+            ClearCollect(
+                colCalendar,
+                ForAll(
+                    Sequence(42),
+                    {
+                        MyDate: DateAdd(varStartDate, ThisRecord.Value - 1, "Days")
+                    }
+                )
+            );
+        Text: =
+        Width: =100
+        X: =95
+        Y: =980
+        ZIndex: =4
+
+    ButtonCanvas5_2 As 按钮:
+        DisplayMode: =DisplayMode.Edit
+        Height: =50
+        Icon: ="ArrowSync"
+        OnSelect: |
+            =Set(varMonthOffset, 0);
+            Set(varCurrentDate, Date(Year(Today()), Month(Today()), 1));
+            Set(varStartDate, DateAdd(varCurrentDate, -Weekday(varCurrentDate) + 1, "Days"));
+            ClearCollect(
+                colCalendar,
+                ForAll(
+                    Sequence(42),
+                    {
+                        MyDate: DateAdd(varStartDate, ThisRecord.Value - 1, "Days")
+                    }
+                )
+            );
+        Text: =
+        Width: =100
+        X: =276
+        Y: =980
+        ZIndex: =5
+
+    ButtonCanvas3_2 As 按钮:
+        DisplayMode: =DisplayMode.Edit
+        Height: =50
+        Icon: ="ArrowRight"
+        OnSelect: |
+            =Set(varMonthOffset, varMonthOffset + 1);
+            Set(varCurrentDate, Date(Year(Today()), Month(Today()) + varMonthOffset, 1));
+            Set(varStartDate, DateAdd(varCurrentDate, -Weekday(varCurrentDate) + 1, "Days"));
+            ClearCollect(
+                colCalendar,
+                ForAll(
+                    Sequence(42),
+                    {
+                        MyDate: DateAdd(varStartDate, ThisRecord.Value - 1, "Days")
+                    }
+                )
+            );
+        Text: =
+        Width: =100
+        X: =458
+        Y: =980
+        ZIndex: =6
+
+    btnInit_2 As 按钮:
+        DisplayMode: =DisplayMode.Edit
+        Height: =41
+        OnSelect: |
+            =ClearCollect(NoteCollection, { Date: Today(), Content: "初始化示例" })
+        Text: ="btnInit"
+        Width: =110
+        X: =95
+        Y: =1057
+        ZIndex: =7
+
+    ButtonCanvas2_2 As 按钮:
+        Align: =Align.Center
+        DisplayMode: =DisplayMode.Edit
+        Height: =49
+        OnSelect: |
+            =UpdateContext({ showAddPopup: true })
+        Width: =100
+        X: =276
+        Y: =1057
+        ZIndex: =8
+
+    ButtonCanvas7_2 As 按钮:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Width: =96
+        X: =481
+        Y: =1074
+        ZIndex: =9
+

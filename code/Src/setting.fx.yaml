@@ -1,0 +1,170 @@
+setting As screen:
+    Fill: =Color.White
+    Height: =956
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+    Width: =440
+
+    Button5 As button:
+        BorderColor: =App.Theme.Colors.Primary
+        Color: =App.Theme.Colors.PrimaryForeground
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 42, 74, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =App.Theme.Colors.PrimaryForeground
+        HoverFill: =App.Theme.Colors.Darker10
+        OnSelect: =Navigate(accountsecurity )
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        RadiusBottomLeft: =60
+        RadiusBottomRight: =60
+        RadiusTopLeft: =60
+        RadiusTopRight: =60
+        Size: =24
+        Text: ="Account security "
+        Width: =280
+        X: =94
+        Y: =152
+        ZIndex: =8
+
+    Button7 As button:
+        BorderColor: =App.Theme.Colors.Primary
+        Color: =App.Theme.Colors.PrimaryForeground
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 42, 74, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =App.Theme.Colors.PrimaryForeground
+        HoverFill: =App.Theme.Colors.Darker10
+        OnSelect: =Navigate(notification)
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        RadiusBottomLeft: =60
+        RadiusBottomRight: =60
+        RadiusTopLeft: =60
+        RadiusTopRight: =60
+        Size: =24
+        Text: ="Notification "
+        Width: =280
+        X: =94
+        Y: =265
+        ZIndex: =9
+
+    Button8 As button:
+        BorderColor: =App.Theme.Colors.Primary
+        Color: =App.Theme.Colors.PrimaryForeground
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 42, 74, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =App.Theme.Colors.PrimaryForeground
+        HoverFill: =App.Theme.Colors.Darker10
+        OnSelect: =Navigate(language)
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        RadiusBottomLeft: =60
+        RadiusBottomRight: =60
+        RadiusTopLeft: =60
+        RadiusTopRight: =60
+        Size: =24
+        Text: ="Language setting "
+        Width: =275
+        X: =98
+        Y: =380
+        ZIndex: =10
+
+    Button10 As button:
+        BorderColor: =App.Theme.Colors.Primary
+        Color: =App.Theme.Colors.PrimaryForeground
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 42, 74, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =App.Theme.Colors.PrimaryForeground
+        HoverFill: =App.Theme.Colors.Darker10
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        RadiusBottomLeft: =60
+        RadiusBottomRight: =60
+        RadiusTopLeft: =60
+        RadiusTopRight: =60
+        Size: =24
+        Text: ="Theme setting "
+        Width: =280
+        X: =94
+        Y: =490
+        ZIndex: =11
+
+    Button11 As button:
+        BorderColor: =App.Theme.Colors.Primary
+        Color: =App.Theme.Colors.PrimaryForeground
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 42, 74, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =App.Theme.Colors.PrimaryForeground
+        HoverFill: =App.Theme.Colors.Darker10
+        OnSelect: =Navigate(about)
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        RadiusBottomLeft: =60
+        RadiusBottomRight: =60
+        RadiusTopLeft: =60
+        RadiusTopRight: =60
+        Size: =24
+        Text: ="About our app"
+        Width: =280
+        X: =94
+        Y: =603
+        ZIndex: =12
+
+    Arrow1_12 As arrow.backArrow:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        Fill: =App.Theme.Colors.Primary
+        Height: =88
+        Width: =86
+        X: =12
+        Y: =12
+        ZIndex: =13
+
+    TextCanvas3 As 文本:
+        DisplayMode: =DisplayMode.Edit
+        Height: =45
+        Size: =30
+        Text: ="Setting"
+        Width: =148
+        X: =179
+        Y: =40
+        ZIndex: =14
+

@@ -1,0 +1,134 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  loginpage:
+    Properties:
+      Fill: =RGBA(230, 230, 230, 1)
+    Children:
+      - Image4_2:
+          Control: Image@2.2.3
+          Properties:
+            Height: =1136
+            Image: ='1435-jpg-1200-1200-false'
+            ImagePosition: =ImagePosition.Fill
+            Transparency: =70%
+            Width: =640
+      - Rectangle2_1:
+          Control: Rectangle@2.3.0
+          Properties:
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =75
+            Width: =560
+            X: =45
+            Y: =478
+      - Rectangle2:
+          Control: Rectangle@2.3.0
+          Properties:
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =74
+            Width: =560
+            X: =45
+            Y: =390
+      - TextInput1:
+          Control: Classic/TextInput@2.3.2
+          Properties:
+            BorderColor: =RGBA(0, 42, 74, 1)
+            BorderStyle: =BorderStyle.None
+            Default: =
+            Font: =Font.'Patrick Hand'
+            HintText: ="Name"
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =29
+            X: =45
+            Y: =390
+      - TextInput2:
+          Control: Classic/TextInput@2.3.2
+          Properties:
+            BorderStyle: =BorderStyle.None
+            Default: =
+            Font: =Font.'Patrick Hand'
+            HintText: ="Password"
+            Mode: =TextMode.Password
+            Size: =29
+            X: =45
+            Y: =478
+      - Login:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.Dashed
+            Fill: =RGBA(0, 0, 0, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Open Sans Condensed'
+            Height: =67
+            OnSelect: "=If(\r\n    !IsBlank(\r\n        LookUp(\r\n            'Database',\r\n            Username = TextInput1.Text && 'Password (Password0)' = TextInput2.Text\r\n        )\r\n    ),\r\n    \r\n    Set(\r\n        CurrentUser,\r\n        LookUp(\r\n            'Database',\r\n            Username = TextInput1.Text && 'Password (Password0)' = TextInput2.Text\r\n        )\r\n    );\r\n    \r\n    Notify(\"The account has been successfully logged in\", NotificationType.Success);\r\n    Navigate(mainpage_1, ScreenTransition.Fade),\r\n    \r\n    Notify(\"Incorrect username or password\", NotificationType.Error)\r\n)\r\n"
+            RadiusBottomLeft: =60
+            RadiusBottomRight: =60
+            RadiusTopLeft: =60
+            RadiusTopRight: =60
+            Size: =30
+            Text: ="login "
+            Width: =460
+            X: =95
+            Y: =716
+      - Label1:
+          Control: Label@2.5.1
+          Properties:
+            BorderStyle: =BorderStyle.None
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Semibold
+            Size: =38
+            Text: ="Login"
+            X: =45
+            Y: =282
+      - Label2:
+          Control: Label@2.5.1
+          Properties:
+            Font: =Font.'Patrick Hand'
+            FontWeight: =FontWeight.Bold
+            Height: =91
+            Size: =60
+            Text: ="NEIGHBORLY"
+            Width: =375
+            X: =133
+            Y: =132
+      - Button1_3:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =3
+            Color: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(204, 204, 204, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Open Sans Condensed'
+            Height: =50
+            HoverBorderColor: =RGBA(179, 179, 179, 1)
+            OnSelect: =    Navigate(Register_2, ScreenTransition.Fade)
+            RadiusBottomLeft: =60
+            RadiusBottomRight: =60
+            RadiusTopLeft: =60
+            RadiusTopRight: =60
+            Size: =25
+            Text: ="register"
+            Width: =254
+            X: =198
+            Y: =883
+      - Arrow1_8:
+          Control: Arrow@2.3.0
+          Variant: BackArrow
+          Properties:
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =80
+            Width: =73
+            X: =22
+            Y: =21

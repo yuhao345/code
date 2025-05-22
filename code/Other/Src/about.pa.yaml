@@ -1,0 +1,83 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  about:
+    Properties:
+      Height: =956
+      Width: =440
+    Children:
+      - Rectangle 22:
+          Control: Rectangle@2.3.0
+          Properties:
+            Fill: =RGBA(166, 166, 166, 1)
+            Height: =552
+            Width: =393
+            X: =21
+            Y: =333
+      - Rectangle 23:
+          Control: Rectangle@2.3.0
+          Properties:
+            Height: =49
+            Width: =152
+            X: =136
+            Y: =758
+      - Icon1:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            Color: =RGBA(0, 0, 0, 1)
+            FocusedBorderThickness: =0
+            Height: =40
+            Icon: =Icon.Reset
+            Width: =40
+            X: =34
+            Y: =32
+      - Button12:
+          Control: Classic/Button@2.2.0
+          Properties:
+            Fill: =RGBA(0, 54, 95, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Height: =49
+            RadiusBottomLeft: =60
+            RadiusBottomRight: =60
+            RadiusTopLeft: =60
+            RadiusTopRight: =60
+            Text: ="submit"
+            Width: =146
+            X: =142
+            Y: =758
+      - Button13:
+          Control: Classic/Button@2.2.0
+          Properties:
+            Fill: =RGBA(0, 42, 74, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Height: =53
+            Text: ="feedback"
+            Width: =223
+            X: =103
+            Y: =204
+      - Button14:
+          Control: Classic/Button@2.2.0
+          Properties:
+            Fill: =RGBA(0, 42, 74, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Height: =57
+            Text: ="app version"
+            Width: =213
+            X: =103
+            Y: =93
+      - TextInput11:
+          Control: Classic/TextInput@2.3.2
+          Properties:
+            Default: =
+            Height: =318
+            HintText: |-
+              ="Enter your feedback: "
+            Width: =367
+            X: =34
+            Y: =389

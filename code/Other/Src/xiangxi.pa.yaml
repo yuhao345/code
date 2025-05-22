@@ -1,0 +1,177 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  xiangxi:
+    Properties:
+      OnVisible: |-
+        =
+        ClearCollect(
+            colUsers,
+            ForAll(
+                Filter(Database, !IsBlank(Username)),
+                { text: "Username"}
+            )
+        );
+        ClearCollect(
+            colComments,
+            Table(
+                { Text: "", Created: Now() }
+            )
+        );
+
+        UpdateContext({
+            _commentText: "",
+            mentionTriggered: false,
+            mentionTerm: "",
+            showCommentPopup: false
+        });
+    Children:
+      - Gallery7:
+          Control: Gallery@2.15.0
+          Variant: BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0
+          Properties:
+            Items: |
+              =Sort(colComments, Created, SortOrder.Ascending)
+            Y: =363
+          Children:
+            - Title6:
+                Control: Label@2.5.1
+                Properties:
+                  BorderColor: =RGBA(0, 0, 0, 1)
+                  Color: =RGBA(50, 49, 48, 1)
+                  FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                  Height: =Self.Size * 1.8
+                  OnSelect: =Select(Parent)
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0
+                  PaddingTop: =0
+                  Size: =14
+                  Text: =ThisItem.Text
+                  VerticalAlign: =VerticalAlign.Top
+                  Width: =Parent.TemplateWidth - 173
+                  X: =102
+                  Y: =45
+      - btnComment:
+          Control: Button@0.0.45
+          Properties:
+            OnSelect: |-
+              =UpdateContext({ showCommentPopup: true })
+            Text: ="Comments"
+            X: =40
+            Y: =40
+      - Container8:
+          Control: GroupContainer@1.3.0
+          Variant: ManualLayout
+          Properties:
+            Visible: =showCommentPopup
+            X: =80
+            Y: =80
+          Children:
+            - btnSubmit:
+                Control: Button@0.0.45
+                Properties:
+                  OnSelect: |
+                    =Collect(colComments, {
+                        Text: _commentText,
+                        Created: Now()
+                    });
+                    UpdateContext({
+                        _commentText: "",
+                        showCommentPopup: false
+                    });
+                    UpdateContext({ showCommentPopup: false })
+                  Text: ="Submit"
+                  Visible: =showCommentPopup
+                  X: =300
+                  Y: =100
+            - TextInput_Comment:
+                Control: TextInput@0.0.54
+                Properties:
+                  OnChange: =
+                  Value: =_commentText
+                  X: =40
+                  Y: =40
+            - ButtonCanvas6:
+                Control: Button@0.0.45
+                Properties:
+                  Height: =30
+                  Icon: ="Dismiss"
+                  OnSelect: |-
+                    =UpdateContext({
+                      showCommentPopup: false,
+                      mentionTriggered: false,
+                      mentionTerm: ""
+                    })
+                  Text: =
+                  Width: =47
+                  X: =411
+                  Y: =10
+            - galMentionList:
+                Control: Gallery@2.15.0
+                Variant: BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0
+                Properties:
+                  Height: =136
+                  Items: =Database
+                  TemplateSize: =40
+                  Visible: =showCommentPopup && mentionTriggered
+                  Width: =254
+                  Y: =75
+                Children:
+                  - Label5:
+                      Control: Label@2.5.1
+                      Properties:
+                        Height: =33
+                        OnSelect: |
+                          =UpdateContext({
+                              _commentText: 
+                                  Left(_commentText, Len(_commentText) - Len(mentionTerm)) & ThisItem.Username,
+
+                              mentionTriggered: false,
+                              mentionTerm: ""
+                          });
+                        Size: =13
+                        Text: =ThisItem.Username
+                        Width: =85
+      - Timer1:
+          Control: Timer@2.1.0
+          Properties:
+            AutoStart: =true
+            Duration: =300
+            OnTimerEnd: |
+              =UpdateContext({ _commentText: TextInput_Comment.Value });
+
+              If(
+                  Right(_commentText, 1) = "@",
+                  UpdateContext({
+                      mentionTriggered: true,
+                      mentionTerm: ""
+                  })
+              );
+
+              If(
+                  mentionTriggered,
+                  UpdateContext({
+                      mentionTerm: Last(Split(_commentText, "@")).Value
+                  })
+              );
+              With(
+                  {
+                      pieces: Split(_commentText, "@")
+                  },
+                  UpdateContext({
+                      mentionTerm: Last(pieces).Value,
+                      mentionTriggered: EndsWith(_commentText, "@" & Last(pieces).Value)
+                  })
+              )
+            Repeat: =true
+            Start: =showCommentPopup
+            Visible: =false
+            X: =117
+            Y: =351

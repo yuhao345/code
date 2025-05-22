@@ -1,0 +1,129 @@
+language As screen:
+    Fill: =Color.White
+    Height: =956
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+    Width: =440
+
+    English_5 As label:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        Height: =34
+        Size: =21
+        Text: ="English"
+        Width: =122
+        X: =22
+        Y: =129
+        ZIndex: =1
+
+    简体中文_5 As label:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        Height: =46
+        Size: =21
+        Text: ="简体中文"
+        Width: =200
+        X: =22
+        Y: =193
+        ZIndex: =2
+
+    "'Русский (язык)_5' As label":
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        Height: =81
+        Size: =21
+        Text: ="Русский (язык)"
+        Width: =237
+        X: =22
+        Y: =255
+        ZIndex: =3
+
+    日本語_5 As label:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        Height: =42
+        Size: =21
+        Text: ="日本語"
+        Width: =156
+        X: =22
+        Y: =354
+        ZIndex: =4
+
+    한국어_5 As label:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        Height: =56
+        Size: =21
+        Text: ="한국어"
+        Width: =251
+        X: =22
+        Y: =405
+        ZIndex: =5
+
+    Français_5 As label:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        Height: =39
+        Size: =21
+        Text: ="Français"
+        Width: =138
+        X: =22
+        Y: =471
+        ZIndex: =6
+
+    Arrow1_11 As arrow.backArrow:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =80
+        OnSelect: =Navigate(setting)
+        Width: =73
+        X: =9
+        Y: =15
+        ZIndex: =9
+
+    Button9_5 As button:
+        BorderColor: =App.Theme.Colors.Primary
+        Color: =App.Theme.Colors.PrimaryForeground
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 0, 0, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =App.Theme.Colors.PrimaryForeground
+        HoverFill: =App.Theme.Colors.Darker10
+        OnSelect: |+
+            =Navigate(setting)
+            
+            
+            
+            
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        RadiusBottomLeft: =60
+        RadiusBottomRight: =60
+        RadiusTopLeft: =60
+        RadiusTopRight: =60
+        Size: =24
+        Text: ="Confirm"
+        Width: =335
+        X: =52
+        Y: =735
+        ZIndex: =10
+

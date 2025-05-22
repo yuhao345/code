@@ -1,0 +1,134 @@
+about As screen:
+    Fill: =Color.White
+    Height: =956
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+    Width: =440
+
+    "'Rectangle 22' As rectangle":
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =RGBA(166, 166, 166, 1)
+        Height: =552
+        Width: =393
+        X: =21
+        Y: =333
+        ZIndex: =4
+
+    "'Rectangle 23' As rectangle":
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =App.Theme.Colors.Primary
+        Height: =49
+        Width: =152
+        X: =136
+        Y: =758
+        ZIndex: =5
+
+    Icon1 As icon.Reset:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =0
+        Height: =40
+        Icon: =Icon.Reset
+        Width: =40
+        X: =34
+        Y: =32
+        ZIndex: =8
+
+    Button12 As button:
+        BorderColor: =App.Theme.Colors.Primary
+        Color: =App.Theme.Colors.PrimaryForeground
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 54, 95, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Semibold
+        Height: =49
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =App.Theme.Colors.PrimaryForeground
+        HoverFill: =App.Theme.Colors.Darker10
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        RadiusBottomLeft: =60
+        RadiusBottomRight: =60
+        RadiusTopLeft: =60
+        RadiusTopRight: =60
+        Size: =24
+        Text: ="submit"
+        Width: =146
+        X: =142
+        Y: =758
+        ZIndex: =9
+
+    Button13 As button:
+        BorderColor: =App.Theme.Colors.Primary
+        Color: =App.Theme.Colors.PrimaryForeground
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 42, 74, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Semibold
+        Height: =53
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =App.Theme.Colors.PrimaryForeground
+        HoverFill: =App.Theme.Colors.Darker10
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        Size: =24
+        Text: ="feedback"
+        Width: =223
+        X: =103
+        Y: =204
+        ZIndex: =10
+
+    Button14 As button:
+        BorderColor: =App.Theme.Colors.Primary
+        Color: =App.Theme.Colors.PrimaryForeground
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 42, 74, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Semibold
+        Height: =57
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =App.Theme.Colors.PrimaryForeground
+        HoverFill: =App.Theme.Colors.Darker10
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        Size: =24
+        Text: ="app version"
+        Width: =213
+        X: =103
+        Y: =93
+        ZIndex: =11
+
+    TextInput11 As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Height: =318
+        HintText: |-
+            ="Enter your feedback: "
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        Size: =21
+        Width: =367
+        X: =34
+        Y: =389
+        ZIndex: =15
+

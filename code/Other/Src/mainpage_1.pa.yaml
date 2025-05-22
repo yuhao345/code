@@ -1,0 +1,150 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  mainpage_1:
+    Properties:
+      Fill: =RGBA(242, 242, 242, 1)
+      Height: =956
+      Width: =440
+    Children:
+      - Frame 9_3:
+          Control: GroupContainer@1.3.0
+          Variant: ManualLayout
+          Properties:
+            BorderThickness: =3
+            Height: =43
+            RadiusBottomLeft: =40
+            RadiusBottomRight: =40
+            RadiusTopLeft: =40
+            RadiusTopRight: =40
+            Width: =440
+            Y: =35
+          Children:
+            - Icon3_2:
+                Control: Classic/Icon@2.5.0
+                Properties:
+                  Color: =RGBA(0, 0, 0, 1)
+                  Height: =25
+                  Icon: =Icon.Camera
+                  Width: =25
+                  X: =14
+                  Y: =10
+            - Icon2_2:
+                Control: Classic/Icon@2.5.0
+                Properties:
+                  Color: =RGBA(0, 0, 0, 1)
+                  Height: =25
+                  Icon: =Icon.Search
+                  Width: =25
+                  X: =398
+                  Y: =10
+      - basic user page_3:
+          Control: GroupContainer@1.3.0
+          Variant: ManualLayout
+          Properties:
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =84
+            Width: =440
+            Y: =880
+          Children:
+            - Icon4_1:
+                Control: Classic/Icon@2.5.0
+                Properties:
+                  BorderColor: =RGBA(255, 255, 255, 1)
+                  BorderStyle: =BorderStyle.Dashed
+                  Color: =RGBA(0, 0, 0, 1)
+                  FocusedBorderThickness: =0
+                  Height: =50
+                  Icon: =Icon.Home
+                  OnSelect: =Navigate(mainpage_1)
+                  Width: =50
+                  X: =53
+                  Y: =18
+            - Icon5_1:
+                Control: Classic/Icon@2.5.0
+                Properties:
+                  Color: =RGBA(0, 0, 0, 1)
+                  Height: =50
+                  Icon: =Icon.Add
+                  Width: =50
+                  X: =192
+                  Y: =18
+            - Icon7_1:
+                Control: Classic/Icon@2.5.0
+                Properties:
+                  Color: =RGBA(0, 0, 0, 1)
+                  Height: =50
+                  Icon: =Icon.Person
+                  OnSelect: =Navigate(user)
+                  Width: =50
+                  X: =330
+                  Y: =18
+      - 7ba86caef8fe16e9d806795aeb78296 1_1:
+          Control: Image@2.2.3
+          Properties:
+            Height: =368
+            Image: ='965307846_1'
+            ImagePosition: =ImagePosition.Fill
+            OnSelect: =Navigate('xiangxi')
+            Width: =220
+            Y: =100
+      - 0399c8a4b40ccd0b74f2bd6bdda04f5 1_1:
+          Control: Image@2.2.3
+          Properties:
+            Height: =368
+            Image: ='730132957_super'
+            ImagePosition: =ImagePosition.Fill
+            Width: =220
+            Y: =468
+      - fbad9db871fc35cab95a510e14752a3 1_1:
+          Control: Image@2.2.3
+          Properties:
+            Height: =368
+            Image: ='961221794'
+            ImagePosition: =ImagePosition.Fill
+            Width: =220
+            X: =220
+            Y: =100
+      - 548bb247b2b0ee9b0a246d746b58097 1_1:
+          Control: Image@2.2.3
+          Properties:
+            Height: =368
+            Image: ='683870733'
+            ImagePosition: =ImagePosition.Fill
+            Width: =220
+            X: =220
+            Y: =468
+      - Rectangle1:
+          Control: Rectangle@2.3.0
+          Properties:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =49
+            Width: =181
+            X: =133
+            Y: =836
+      - Icon6:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =40
+            Icon: =Icon.ChevronLeft
+            Width: =40
+            X: =133
+            Y: =840
+      - Icon8:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =40
+            Icon: =Icon.ChevronRight
+            OnSelect: =Navigate(mainpage_2)
+            Width: =40
+            X: =269
+            Y: =840
